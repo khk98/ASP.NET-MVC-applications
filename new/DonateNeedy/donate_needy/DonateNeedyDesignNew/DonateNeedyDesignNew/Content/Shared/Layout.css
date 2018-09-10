@@ -1,0 +1,176 @@
+﻿.Connect-with-Us {
+    font-family: Roboto;
+    font-size: 0.875em;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+    padding-top: 1%;
+}
+
+.Donate-Now {
+    width: 5.625em;
+    height: 1.000em;
+    font-family: Roboto;
+    font-size: 0.875em;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.donatebutton {
+    width: 8.750em;
+    height: 2.000em;
+    background-color: #0158b4;
+    color: #fff;
+    line-height: 1.875em;
+    font-size: 1.375em;
+    border-radius: 0.125em;
+    margin-right: 0.313em;
+    transition: all .15s ease-in-out;
+    border: 0;
+    outline: none;
+}
+
+.sr-icon {
+    width: 2.000em;
+    height: 2.000em;
+    color: #fff;
+    line-height: 1.875em;
+    font-size: 1.375em;
+    border-radius: 0.125em;
+    margin-right: 0.313em;
+    transition: all .15s ease-in-out;
+    border: 0;
+    outline: none;
+}
+
+.user-header{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+/*New*/
+
+.sl-main-wrp-ctnr {
+    width: 100%;
+    height: auto;
+}
+
+.sl-header-ctnr {
+    width: 100%;
+    height: auto;
+}
+
+.scl-icons-sr-ctnr {
+    min-height: 100px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    width:80%;
+}
+
+.scl-icons-sr-ctnr2 {
+    min-height: 52px;
+    width: 80%;
+}
+
+
+
+#fb {
+    background-color: #3b579d;
+}
+
+#tw {
+    background-color: #30aced;
+}
+
+#linkedin {
+    background-color: #1e7bb6;
+}
+
+
+
+.user-float-right{
+    float:right;
+}
+
+.navbar-user {
+    background-color: #087804;
+}
+
+.remove-mrl {
+    margin-left:0px;
+    margin-right:0px;
+}
+
+.remove-prl{
+    padding-left:0px;
+    padding-right:0px;
+}
+
+
+.user-col {
+    width: 20%;
+}
+
+.Rectangle-6 {
+    width: 177px;
+    height: 35px;
+    border-radius: 8px;
+    border: solid 1px #ffffff;
+    padding-top: 4px;
+}
+
+.user-width-footer1 {
+    width: 14%;
+}
+
+.user-width-footer2 {
+    width: 21%;
+}
+
+
+@media (max-width:768px) {
+    .user-float-right {
+        float:left;
+    }
+
+    .user-width-footer1 {
+        width: auto;
+    }
+
+    .user-width-footer2 {
+        width: auto;
+    }
+    .scl-icons-sr-ctnr {
+        text-align: center;
+    }
+
+    footer{
+        text-align:center;
+    }
+
+    .Rectangle-6 {
+      margin-left:31%;
+    }
+
+    .donatebutton {
+ margin-top:5px;
+    }
+}
+
+@media (max-width:600px) {
+    .scl-icons-sr-ctnr {
+        text-align: center;
+    }
+
+}
+
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0d0151969d804734854689075880b7cb" Name="Diagram1">
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblAuthentication" Width="1.5" PointX="12.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblCategory" Width="1.5" PointX="16.5" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblCharity" Width="1.5" PointX="7.5" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblCity" Width="1.5" PointX="5.25" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblContactU" Width="1.5" PointX="12.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblCountry" Width="1.5" PointX="0.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblDonation" Width="1.5" PointX="15.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblDonationType" Width="1.5" PointX="13.5" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblEmailTemplateSave" Width="1.5" PointX="12.75" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblErrorlog" Width="1.5" PointX="12.75" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblEvent" Width="1.5" PointX="18.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblFeedback" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblFeedbackReason" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblRegistration" Width="1.5" PointX="10.5" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblState" Width="1.5" PointX="3" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblStatu" Width="1.5" PointX="13.5" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblSubscribe" Width="1.5" PointX="12.75" PointY="46.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblTestimonial" Width="1.5" PointX="12.75" PointY="50.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblTitle" Width="1.5" PointX="8.25" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateNeedyNewModel.tblUserType" Width="1.5" PointX="8.25" PointY="32.25" IsExpanded="true" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblAuthentication_tblRegistration" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblEvent_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblCharit__chari__640DD89F" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblCharit__chari__6501FCD8" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblCharit__chari__65F62111" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblCharit__event__66EA454A" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblRegist__cityi__2CBDA3B5" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblRegist__cityi__2DB1C7EE" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblRegist__cityi__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblRegist__cityi__6166761E" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblCity_tblstate" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblContac__regis__1699586C" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblRegistration_tblCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblState_tblCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblDonati__donat__24285DB4" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblDonati__Event__0F2D40CE" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblDonati__regis__2F9A1060" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblDonati__Statu__10216507" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblEmailT__regis__0EF836A4" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblErrorl__regis__178D7CA5" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblEvent_tblRegistration" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblFeedba__feedb__2FCF1A8A" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblRegist__title__7073AF84" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK__tblSubscr__regis__2022C2A6" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblRegistration_tblState" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblRegistration_tblUserType" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateNeedyNewModel.FK_tblTestimonial_tblRegistration" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

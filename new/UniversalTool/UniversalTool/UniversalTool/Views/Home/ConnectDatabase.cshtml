@@ -1,0 +1,150 @@
+﻿@model UniversalTool.Models.Database
+@{
+    ViewBag.Title = "ConnectDatabase";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="/Home/Index"><i class="fa fa-dashboard fa-fw"></i>DashBoard</a>
+            </li>
+            <li>
+                <a href="/Home/ConnectDatabase"><i class="fa fa-bar-chart-o fa-fw"></i> Connect Database</a>
+               
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="/Home/CreateTemplate"><i class="fa fa-table fa-fw"></i> Create Template</a>
+            </li>
+            <li>
+                <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="panels-wells.html">Panels and Wells</a>
+                    </li>
+                    <li>
+                        <a href="buttons.html">Buttons</a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">Notifications</a>
+                    </li>
+                    <li>
+                        <a href="typography.html">Typography</a>
+                    </li>
+                    <li>
+                        <a href="icons.html"> Icons</a>
+                    </li>
+                    <li>
+                        <a href="grid.html">Grid</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#">Second Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Second Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Third Level <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-third-level -->
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="blank.html">Blank Page</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Login Page</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Connect Database</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+
+
+
+      <div class="container">
+
+            <div class="row">
+
+
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="login-panel panel panel-default">
+                        <div class="panel-heading" style="background-color :#4bd087">
+                            <h3 class="panel-title" style="color:white ">Please Sign In</h3>
+                        </div>
+                        <div class="panel-body">
+                            <script src="~/Scripts/JQuery/Common.js"></script>
+                            @using (Html.BeginForm())
+                            {
+                                <div class="well text-center" id="connection_success_message" style="display: none;color:#118811;font-size:16px;font-weight:bold;"></div>
+                                <div   style="padding:10px">@Html.TextBoxFor(d => d.DataServerName, "", new { id = "serverName",placeholder = "Data Server name", style = "border:1px solid #2AD18D;border-radius:5px;height: 30px;width: 70%;" })</div>
+                                <div>@Html.ValidationMessageFor(d=> d.DataServerName)</div>
+                                <div  style="padding:10px">@Html.TextBoxFor(d => d.UserId, "", new {id="userId", placeholder = "UserId", style = "border:1px solid #2AD18D;border-radius:5px;height: 30px;width: 70%;" })</div>
+                                 <div>@Html.ValidationMessageFor(d => d.UserId)</div>
+                                <div  style="padding:10px">@Html.PasswordFor(d => d.Password, new { id = "password",placeholder = "Password", style = "border:1px solid #2AD18D ;border-radius:5px;height: 30px;width: 70%;" })</div>
+                                 <div>@Html.ValidationMessageFor(d => d.Password)</div>
+                                
+                                <div class="col-md-8 text-center" style="display : inline-block;padding: 20px">
+
+                                    <input type="button" id="Connectbtn" name="Connect" class="btn  btn-primary" value="Connect" onclick="connectWithDatabase();">
+                                    <input type="button" id="Disconnectbtn" name="Disconnect" class="btn  btn-danger" value="Disconnect" onclick="resetConnectionResponse();" disabled>
+                                </div>
+                            }
+                        </div>
+                       
+                        <!-- Stepper -->
+
+
+                    </div>
+                </div>
+            </div>
+
+           
+
+        </div>    
+
+    </div>
+</div>
+
+
+

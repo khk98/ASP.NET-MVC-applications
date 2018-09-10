@@ -1,0 +1,477 @@
+﻿.They-feed-you-every {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 52px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+}
+
+    .They-feed-you-every .text-style-1 {
+        font-weight: 300;
+    }
+
+.Rectangle-3-Copy {
+    width: auto;
+    height: auto;
+    background-color: #fdd751;
+    border: solid 0.0625em #979797;
+    text-align: center;
+}
+
+.layer {
+    height: 42px;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+.Activities {
+    height: 28px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+.money {
+    height: 42px;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+.over-all-fund-raised {
+    height: 56px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+.This-is-Who-We-Are {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.DonateNeedy-is-one-o {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.Browse-by-Category {
+    width: 319px;
+    height: 42px;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.Rectangle-3-Copy-12 {
+    width: auto;
+    height: auto;
+    background-color: #eeeae4;
+    border: solid 1px #979797;
+    border: solid 1px var(--warm-grey);
+    padding-top:20px;
+    margin-bottom:20px;
+}
+
+p {
+    margin: 0 0 8px;
+}
+
+.Mask {
+    width: auto;
+    height: auto;
+    background-color: #0158b4;
+    padding-top: 1%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.Big-or-Small-your-d {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.Find-a-cause-you-bel {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.Fund-raising {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.Crowdfunding {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.Rectangle-5-Copy {
+    width: 300px;
+    height: 51.7px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    text-align:center;
+    margin-left:1%;
+    margin-top:1%;
+    padding-top:1.5%;
+}
+
+.Shape {
+    width: 200px;
+    height: 179px;
+    object-fit: contain;
+    background-color: #0158b4;
+}
+
+
+
+.Rectangle-3-Copy-4 {
+    width: auto;
+    height: auto;
+    background-color: #eeeae4;
+    border: solid 1px #979797;
+    padding-bottom: 45px;
+}
+
+.Testimonials {
+    width: 206px;
+    height: 42px;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    margin-top: 25px;
+    margin-bottom: 16px;
+}
+
+.Rectangle-3-Copy-5 {
+    width: 527px;
+    height: auto;
+    background-color: #ffffff;
+    border: solid 1px #979797;
+}
+
+.Rectangle-3-Copy-7 {
+    width: 160px;
+    height: 160px;
+    background-color: #ffffff;
+    border: solid 1px #979797;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+.User-Name {
+    width: auto;
+    height: 27px;
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #444444;
+}
+
+.Lorem-Ipsum-Lorem-Ip {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+    margin-left: 6px;
+}
+
+.Read-more {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+    float: right;
+}
+
+
+.Education-Copy-2 {
+    height: 21px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+
+.Combined-Shape {
+    width: 70px;
+    height: 70px;
+}
+
+.Group-12 {
+    width: 80px;
+    height: 80px;
+}
+
+.testimonial-carousel {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 20px;
+}
+
+#gl-item1, #gl-item3, #gl-item7 {
+    right: 15px
+}
+
+.jssora053, .jssorb052 .i {
+    position: absolute;
+    cursor: pointer
+}
+
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+
+@keyframes jssorl-009-spin {
+    from,to {
+        transform: rotate(0)
+    }
+}
+
+.zoom, .zoom-one {
+    transform: scale(1.2)
+}
+
+.jssorb052 .i .b {
+    fill: #000;
+    fill-opacity: .3
+}
+
+.jssorb052 .i:hover .b {
+    fill-opacity: .7
+}
+
+.jssorb052 .iav .b {
+    fill-opacity: 1
+}
+
+.jssorb052 .i.idn {
+    opacity: .3
+}
+
+.jssora053 {
+    display: block
+}
+
+    .jssora053 .a {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 640;
+        stroke-miterlimit: 10
+    }
+
+    .jssora053:hover {
+        opacity: .8
+    }
+
+    .jssora053.jssora053dn {
+        opacity: .5
+    }
+
+    .jssora053.jssora053ds {
+        opacity: .3;
+        pointer-events: none
+    }
+
+@media (max-width:768px) {
+
+
+    .Rectangle-3-Copy-5 {
+        width:auto;
+        text-align:center;
+    }
+
+    .carousel-control.right {
+        right: -25px;
+        left: auto;
+        top: 15px;
+    }
+    .carousel-control.left {
+        left: -25px;
+        right: auto;
+        top: 15px;
+    }
+
+
+
+    .Education-Copy-2 {
+        height: 10.5px;
+        font-size: 9px;
+    }
+
+    .Group-12 {
+        width: 70px;
+        height: 70px;
+    }
+
+    .Combined-Shape {
+        width: 60px;
+        height: 60px;
+    }
+
+    .main-slider .flex-caption p {
+        margin: -300px 250px 0px;
+    }
+
+
+    .They-feed-you-every {
+        width: 288px;
+        height: 64px;
+        font-size: 45px;
+    }
+
+    .Mask {
+      text-align:center;
+    }
+
+    .Browse-by-Category {
+        height: 42px;
+        font-size: 30px;
+    }
+
+    .DonateNeedy-is-one-o {
+        height: 80px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.7;
+    }
+
+    .This-is-Who-We-Are {
+        font-size: 30px;
+    }
+
+
+    .layer {
+        height: 21px;
+        font-size: 20px;
+    }
+
+    .Activities {
+        height: 14px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .money {
+        height: 21px;
+        font-size: 20px;
+    }
+
+    .over-all-fund-raised {
+        height: 28px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    p {
+        margin-bottom:4px !important;
+    }
+}
+

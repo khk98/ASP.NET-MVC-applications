@@ -1,0 +1,480 @@
+﻿    
+@{
+    ViewBag.Title = "CreateFundraisingForm";
+}
+
+<link href="~/Content/Home/CreateFundraisingForm.css" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="~/Content/Home/DonateForm.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="row" style="margin-top:20px;">
+        <div class="tab" role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#personal" aria-controls="home" role="tab" data-toggle="tab" onclick="personal();">Personal</a></li>
+                <li role="presentation"><a href="#charity" aria-controls="profile" role="tab" data-toggle="tab" onclick="charity();">Charity</a></li>
+                <li role="presentation"><a href="#socialevent" aria-controls="messages" role="tab" data-toggle="tab" onclick="socialevent();">Social Event</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content tabs">
+                <div role="tabpanel" class="tab-pane fade in active" id="personal">
+                    @*<div class="form-group formtop">
+                            <div class="form-width form-inline-user">
+                                <label>Event Title</label> <span class="required">*</span>;
+                                <input class="form-control" type="text" name="eventtitle" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label>Organiser Name</label><span class="required">*</span>
+                                <input class="form-control" type="text" name="organisername" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label>Category</label><span class="required">*</span>
+                                <select class="form-control" name="category" required>
+                                    <option disabled selected>Select</option>
+                                    <option>Animals and Pets</option>
+                                    <option>Family and Support</option>
+                                    <option>Fatiligious Organisation</option>
+                                    <option>Education</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h4 class="Personal-Information">Personal Information</h4>
+
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">First Name</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter First Name" />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Middle Name</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Middle Name" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Last Name</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Last Name" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Phone Number</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Phone Number" />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Email</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Email" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">State</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter State" />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">City</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter City" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Address</label>
+                                <textarea maxlength="100" type="text" class="form-control" placeholder="Enter Address"></textarea>
+                            </div>
+                        </div>
+                        <hr class="line-color" />
+
+                        <h4 class="Personal-Information">Event Details</h4>
+
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Photo</label>
+                                <input type="file" class="form-control" name="photo" required /><p class="Remaining-charcters">File should be less than 150KB</p>
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Video</label>
+                                <input type="file" class="form-control" name="video" required /><p class="Remaining-charcters">File should be less than 2MB</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Description</label>
+                                <textarea class="form-control description" name="description" required rows="5 " placeholder="Enter Description"></textarea><p class="Remaining-charcters">Remaining Characters:250</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Goal</label>
+                                <input class="form-control goal" type="text" name="goal" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Start Date</label>
+                                <input class="form-control" id="datepicker" type="text" name="startdate" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">End Date</label>
+                                <input class="form-control endform" id="datepicker1" type="text" name="enddate" required />
+                            </div>
+                        </div>
+                        <button class="btn btn-primary nextBtn pull-right Rectangle-createfundform" type="button">Create</button>
+                        <button class="btn btn-primary nextBtn pull-right Rectangle-cancelform" type="button">Cancel</button>*@
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="charity">
+                    @*<div class="form-group formtop">
+                            <div class="form-width form-inline-user">
+                                <label>Event Title</label> <span class="required">*</span>;
+                                <input class="form-control" type="text" name="eventtitle" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label>Organiser Name</label><span class="required">*</span>
+                                <input class="form-control" type="text" name="organisername" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label>Category</label><span class="required">*</span>
+                                <select class="form-control" name="category" required>
+                                    <option disabled selected>Select</option>
+                                    <option>Animals and Pets</option>
+                                    <option>Family and Support</option>
+                                    <option>Fatiligious Organisation</option>
+                                    <option>Education</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h4 class="Personal-Information">Charity Information</h4>
+
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Charity Name</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Charity Name" />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Charity Identification Number</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Charity Identification Number" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Person of Contact</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Person of Contact" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Phone Number</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Phone Number" />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Email</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter Email" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">State</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter State" />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">City</label>
+                                <input maxlength="100" type="text" class="form-control" placeholder="Enter City" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Address</label>
+                                <textarea maxlength="100" type="text" class="form-control" placeholder="Enter Address"></textarea>
+                            </div>
+                        </div>
+                        <hr class="line-color" />
+
+                        <h4 class="Personal-Information">Event Details</h4>
+
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Photo</label>
+                                <input type="file" class="form-control" name="photo" required /><p class="Remaining-charcters">File should be less than 150KB</p>
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Video</label>
+                                <input type="file" class="form-control" name="video" required /><p class="Remaining-charcters">File should be less than 2MB</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Description</label>
+                                <textarea class="form-control description" name="description" required rows="5 " placeholder="Enter Description"></textarea><p class="Remaining-charcters">Remaining Characters:250</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Goal</label>
+                                <input class="form-control goal" type="text" name="goal" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Start Date</label>
+                                <input class="form-control" id="datepicker" type="text" name="startdate" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">End Date</label>
+                                <input class="form-control endform" id="datepicker1" type="text" name="enddate" required />
+                            </div>
+                        </div>
+                        <button class="btn btn-primary nextBtn pull-right Rectangle-createfundform" type="button">Create</button>
+                        <button class="btn btn-primary nextBtn pull-right Rectangle-cancelform" type="button">Cancel</button>*@
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="socialevent">
+                    @*<div class="form-group formtop">
+                            <div class="form-width form-inline-user">
+                                <label>Event Title</label> <span class="required">*</span>;
+                                <input class="form-control" type="text" name="eventtitle" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label>Organiser Name</label><span class="required">*</span>
+                                <input class="form-control" type="text" name="organisername" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label>Category</label><span class="required">*</span>
+                                <select class="form-control" name="category" required>
+                                    <option disabled selected>Select</option>
+                                    <option>Animals and Pets</option>
+                                    <option>Family and Support</option>
+                                    <option>Fatiligious Organisation</option>
+                                    <option>Education</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h4 class="Personal-Information">Event Details</h4>
+
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Photo</label>
+                                <input type="file" class="form-control" name="photo" required /><p class="Remaining-charcters">File should be less than 150KB</p>
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Video</label>
+                                <input type="file" class="form-control" name="video" required /><p class="Remaining-charcters">File should be less than 2MB</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Description</label>
+                                <textarea class="form-control description" name="description" required rows="5 " placeholder="Enter Description"></textarea><p class="Remaining-charcters">Remaining Characters:250</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Goal</label>
+                                <input class="form-control goal" type="text" name="goal" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">Start Date</label>
+                                <input class="form-control" id="datepicker" type="text" name="startdate" required />
+                            </div>
+                            <div class="form-width form-inline-user">
+                                <label class="control-label">End Date</label>
+                                <input class="form-control endform" id="datepicker1" type="text" name="enddate" required />
+                            </div>
+                        </div>
+                        <button class="btn btn-primary nextBtn pull-right Rectangle-createfundform" type="button">Create</button>
+                        <button class="btn btn-primary nextBtn pull-right Rectangle-cancelform" type="button">Cancel</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div class="container">
+  
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" style="outline:none;margin-bottom:20px;" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="border-radius:0px;">
+                <div class="modal-header Rectangle-8-Copy row">
+                    <div class="col-lg-12">
+                        <img class="grey600" src="~/img/createfundraisingform/grey-600 (1).svg" />
+                        <h4 class="modal-title Event-created">Event created</h4>
+                    </div>
+
+                </div>
+               <div class="modal-body row user-popup-center" style="margin-bottom:0px;">
+                    <div class="col-lg-12">
+                        <p class="The-event-has-been-c">
+                            The event has been created successfully.
+                            We will notify you after completing the verification.
+                        </p>
+
+                        <p class="Do-you-want-to-creat">
+                            Do you want to create one more event?
+                        </p>
+                        <div class="scl-icons-sr-ctnr container" style="min-height:initial;">
+                            <div class="Rectangle-9 col-lg-6 col-xs-6">
+                                NO
+                            </div>
+                            <div class="Rectangle-91 col-lg-6 col-xs-6">
+                                YES
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>*@
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<script src="~/Scripts/Home/CreateFundraisngForm.js"></script>
+@*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy7tzdTmgXssNzzysjPI9y7hanDkTeywY&libraries=places&callback=initAutocomplete" async defer></script>*@
+
+<script @*src="~/Scripts/Home/CreateFundraisngForm.js"*@>
+    $(document).ready(function () {
+        personal();
+    });
+    function personal() {
+
+        $('#personal').html('');
+        $('#charity').html('');
+        $('#socialevent').html('');
+
+        var s = "";
+        s += '<form role="form" action="/Home/CreateFundraisingForm" method="post"><div class="form-group formtop"><div class="form-width form-inline-user"><label>Event Title</label> <span class="required" id="validation_message">*</span><input class="form-control" type="text" id="title" name="eventtitle" required onchange="checkTitle();"/></div><div class="form-width form-inline-user"><label>Organiser Name</label><span class="required">*</span><input class="form-control" type="text" name="organisername" required /></div><div class="form-width form-inline-user"> <label>Category</label><span class="required">*</span>';
+    
+        s += ' <select name="category" id="category" class="form-control" required></select>';
+
+        s += '</div ></div ></div > <h4 class="Personal-Information">Personal Information</h4> <div class="form-group"> <div class="form-width form-inline-user"><label class="control-label">First Name</label> <input maxlength="100" type="text" class="form-control" name="firstname" placeholder="Enter First Name" required pattern="[a-zA-Z\s]+" title="Please do not include numbers or special characters." value="@ViewBag.firstname" readonly/></div> <div class="form-width form-inline-user"><label class="control-label">Middle Name</label><input maxlength="100" type="text" name="middlename" class="form-control" placeholder="Enter Middle Name" pattern="[a-zA-Z\s]+" title="Please do not include numbers or special characters." value="@ViewBag.MiddleName" readonly/></div></div> <div class="form-group"> <div class="form-width form-inline-user"><label class="control-label">Last Name</label><input maxlength="100" value="@ViewBag.lastname" type="text" class="form-control" placeholder="Enter Last Name" required pattern="[a-zA-Z\s]+" name="lastname" title="Please do not include numbers or special characters." readonly/></div></div> <div class="form-group"><div class="form-width form-inline-user"><label class="control-label">Phone Number</label><input maxlength="100" type="text" class="form-control" placeholder="Enter Phone Number" required pattern="^[0-9]*$" name="phonenumber" title="Please enter a valid 10 digit phone number. " value="@ViewBag.PhoneNumber" readonly/></div><div class="form-width form-inline-user"><label class="control-label">Email</label><input value="@ViewBag.email" maxlength="100" type="email" name="email" class="form-control" placeholder="Enter Email" required readonly/></div></div> <div class="form-group"><div class="form-width form-inline-user"><label class="control-label">Country</label><input value="@ViewBag.country" name="Country" maxlength="100" type="text" class="form-control" placeholder="Enter Country" pattern="[a-zA-Z\s]+" title="Please do not include numbers or special characters." required readonly/></div><div class="form-width form-inline-user"><label class="control-label">State</label><input value="@ViewBag.state" name="state" maxlength="100" type="text" class="form-control" placeholder="Enter State" pattern="[a-zA-Z\s]+" title="Please do not include numbers or special characters." required readonly/></div><div class="form-width form-inline-user"><label class="control-label">City</label><input value="@ViewBag.city" name="city" maxlength="100" type="text" class="form-control" placeholder="Enter City" pattern="[a-zA-Z\s]+" title="Please do not include numbers or special characters." required readonly/></div> </div> <div class="form-group"> <div class="form-width form-inline-user"><label class="control-label">Address</label><textarea class="form-control description" name="description" required rows="5 " placeholder="Enter Description" onkeyup="CountChar(this)" readonly>@ViewBag.Address</textarea><div class="row"><p class="Remaining-charcters col-lg-1" id="descriptionCharVal">250</p><p class="Remaining-charcters col-lg-2">Remaining Characters:</p></div></div> </div> <hr class="line-color" readonly/> <h4 class="Personal-Information">Event Details</h4> <div class="form-group"> <div class="form-width form-inline-user"><label class="control-label" >Photo</label> <input type="file" class="form-control" name="photo" required/><p class="Remaining-charcters">File should be less than 150KB</p></div><div class="form-width form-inline-user"> <label class="control-label">Video</label> <input type="file" class="form-control" name="video" required /><p class="Remaining-charcters">File should be less than 2MB</p></div></div> <div class="form-group"><div class="form-width form-inline-user"><label class="control-label" >Description</label> <textarea class="form-control description" name="description" required rows="5" placeholder="Enter Description"></textarea><p class="Remaining-charcters">Remaining Characters:250</p> </div></div> <div class="form-group"><div class="form-width form-inline-user"><label class="control-label">Goal</label> <input class="form-control goal" type="text" name="goal" required /></div></div> <div class="form-group"><div class="form-width form-inline-user"> <label class="control-label">Start Date</label><input class="form-control" id="datepicker" type="text" name="startdate" required /></div><div class="form-width form-inline-user"><label class="control-label">End Date</label><input class="form-control endform" id="datepicker1" type="text" name="enddate" required /></div></div><div class="container"><button type="button" class="btn btn-primary nextBtn pull-right Rectangle" style="outline:none;margin-bottom:20px;" data-toggle="modal" data-target="#myModal">Create</button><!--Modal --><div class="modal fade" id="myModal" role="dialog"><div class="modal-dialog"><!-- Modal content--><div class="modal-content" style="border-radius:0px;"> <div class="modal-header Rectangle-8-Copy row"> <div class="col-lg-12"><img class="grey600" src="~/img/createfundraisingform/grey-600 (1).svg" /><h4 class="modal-title Event-created">Event created</h4> </div></div><div class="modal-body row user-popup-center" style="margin-bottom:0px;"> <div class="col-lg-12"> <p class="The-event-has-been-c"> The event has been created successfully. We will notify you after completing the verification.</p><p class="Do-you-want-to-creat"> Do you want to create one more event? </p> <div class="scl-icons-sr-ctnr container" style="min-height:initial;"> <div class="Rectangle-9 col-lg-6 col-xs-6"> NO</div><div class="Rectangle-91 col-lg-6 col-xs-6"> YES</div></div> </div></div> </div> </div> </div><button class="btn btn-primary nextBtn pull-right Rectangle-cancelform" type = "reset" >Cancel</button ></div ></form >';
+
+    $('#personal').append(s);
+
+       form();
+        //initAutocomplete();
+        addcategories();
+        checkTitle();
+    }
+
+    function charity() {
+        $('#personal').html('');
+        $('#charity').html('');
+        $('#socialevent').html('');
+
+        var s = "";
+
+        s += ' <form><div class="form-group formtop"><div class="form-width form-inline-user"> <label>Event Title</label> <span class="required">*</span><input class="form-control" type="text" name="eventtitle" required pattern="[a-zA-Z\s]+" /></div><div class="form-width form-inline-user"><label>Organiser Name</label><span class="required">*</span><input class="form-control" type="text" name="organisername" required /></div>    <div class="form-width form-inline-user"> <label>Category</label><span class="required">*</span><select name="category" id="category" class="form-control" required></select></div ></div ><h4 class="Personal-Information">Charity Information</h4> <div class="form-group"> <div class="form-width form-inline-user"><label class="control-label">Charity Name</label><input maxlength="100" type="text" class="form-control" placeholder="Enter Charity Name" required pattern="[a-zA-Z\s]+" /> </div><div class="form-width form-inline-user"><label class="control-label">Charity Identification Number</label> <input maxlength="100" type="text" class="form-control" placeholder="Enter Charity Identification Number" pattern="^[0-9]*$" required /> </div></div><div class="form-group"><div class="form-width form-inline-user"><label class="control-label">Person of Contact</label><input maxlength="100" type="text" class="form-control" placeholder="Enter Person of Contact" required pattern="[a-zA-Z\s]+" /></div></div><div class="form-group"><div class="form-width form-inline-user"><label class="control-label">Phone Number</label><input maxlength="100" type="text" class="form-control" placeholder="Enter Phone Number" required pattern="^[0-9]*$" /></div><div class="form-width form-inline-user"><label class="control-label">Email</label><input maxlength="100" type="email" class="form-control" placeholder="Enter Email" required /></div> </div><div class="form-group"><div class="form-width form-inline-user"><label>Country</label><span class="required">*</span><select name = "country" id = "country" class="form-control" onchange="addStates();" required></select><label>State</label><span class="required">*</span><select name = "state" id = "state"  onchange="addCities();" class="form-control" required ></select ></div><div class="form-width form-inline-user"><label class="control-label">City</label><span class="required">*</span> <select name = "city" id = "city"  class="form-control" required ></select></div></div><div class="form-group"><div class="form-width form-inline-user"><label class="control-label">Address</label><textarea maxlength="100" type="email" class="form-control" placeholder="Enter Address" required ></textarea></div></div><hr class="line-color" /><h4 class="Personal-Information">Event Details</h4><div class="form-group"> <div class="form-width form-inline-user"><label class="control-label">Photo</label><input type="file" class="form-control" name="photo" required /><p class="Remaining-charcters">File should be less than 150KB</p></div><div class="form-width form-inline-user"><label class="control-label">Video</label><input type="file" class="form-control" name="video" required /><p class="Remaining-charcters">File should be less than 2MB</p></div></div><div class="form-group"><div class="form-width form-inline-user"><label class="control-label">Description</label><textarea class="form-control description" name="description" required rows="5 " placeholder="Enter Description"></textarea><p class="Remaining-charcters">Remaining Characters:250</p></div></div><div class="form-group"><div class="form-width form-inline-user"><label class="control-label">Goal</label><input class="form-control goal" type="text" name="goal" required /></div></div><div class="form-group"><div class="form-width form-inline-user"> <label class="control-label">Start Date</label><input class="form-control" id="datepicker" type="text" name="startdate" required /></div><div class="form-width form-inline-user"><label class="control-label">End Date</label><input class="form-control endform" id="datepicker1" type="text" name="enddate" required /></div></div> </div ><button class="btn btn-primary nextBtn pull-right Rectangle-createfundform" type="submit">Create</button> <button class="btn btn-primary nextBtn pull-right Rectangle-cancelform" type="reset">Cancel</button></form > ';
+
+        $('#charity').append(s);
+       
+        form();
+        //initAutocomplete();
+        addcategories();
+        addCountries();
+        
+    }
+    function addcategories() {
+
+        $('#category').empty();
+        $('#category').append('<option  selected disabled>' + "Select Category" + '</option>');
+        $.ajax({
+            type: 'GET',
+            url: '/Home/GetCategories',
+            success: function (result) {
+                $.each(result, function (key, value) {
+                    $('#category').append('<option value="' + value.CategoryId + '">' + value.CategoryName + '</option>');
+                });
+            }
+        });
+    }
+    function addCountries()
+    {
+         $('#country').empty();
+        $('#country').append('<option  selected disabled>' + "Select Country" + '</option>');
+        $.ajax({
+            type: 'GET',
+            url: '/Home/GetCountries',
+          
+            success: function (result) {
+                $.each(result, function (key, value) {
+                    $('#country').append('<option value="' + value.CountryID + '">' + value.CountryName + '</option>');
+                });
+            }
+        });
+    }
+
+    function addCities() {
+        $('#city').empty();
+        $('#city').append('<option  selected disabled>' + "Select City" + '</option>');
+        var stateID = $('#state option:selected').val();
+        $.ajax({
+            type: 'GET',
+            url: '/Home/GetCity',
+            data: { state_id: stateID },
+            success: function (result) {
+                $.each(result, function (key, value) {
+                    $('#city').append('<option value="' + value.Cityid + '">' + value.Cityname + '<option>');
+                });
+            }
+        });
+    }
+
+    function addStates() {
+        debugger;
+        $('#state').empty();
+        $('#state').append('<option  selected disabled>' + "Select State" + '</option>');
+        debugger;
+        var countryID = $('#country option:selected').val();
+        $.ajax({
+            type: 'GET',
+            url: '/Home/GetStates',
+            data: { country_id: countryID },
+            success: function (result) {
+                $.each(result, function (key, value) {
+                    $('#state').append('<option value="' + value.StateID + '">' + value.StateName + '</option>');
+                });
+            }
+        });
+    }
+    function checkTitle() {
+        var title = $('#title').val();
+        $.ajax({
+            type: 'GET',
+            url: '/Home/checkTitle',
+            data: { Title: title },
+            success: function (result) {
+                if (result === "true") {
+                    $('#title').val() = "";
+                    $('#validation_message').val() = "The title is already taken please enter a new title";
+                }
+                
+            }
+        });
+
+    }
+
+    function CountChar(val) {
+        var len = val.value.length;
+        if (len > 250) {
+            val.value = val.value.substring(0, 250);
+        } else {
+            $('#descriptionCharVal').text(250 - len);
+        }
+    }
+</script>
+
+
+

@@ -1,0 +1,329 @@
+﻿.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.formtop {
+    background-color: gainsboro;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left:45px;
+}
+
+.form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+}
+
+.required{
+    color:red;
+    margin-left:1px;
+}
+
+.label-center{
+    text-align:center;
+    margin-top:5px;
+}
+
+.form-data{
+    margin-bottom: 40px;
+}
+
+.line-color{
+    margin-top:60px;
+    border:1px solid darkgrey;
+}
+
+
+.description{
+    max-width:800px;
+}
+
+.charityidentificationnumber{
+    max-width:716px;
+}
+
+.form-right {
+    float: right;
+    margin-right: 20px;
+}
+
+.goal{
+    margin-bottom:6px;
+}
+
+.endform{
+    margin-bottom:12px;
+}
+
+.buttonform{
+    height:30px;
+    width:120px;
+}
+
+
+.Rectangle-8-Copy {
+    width: auto;
+    height: 50px;
+    background-color: #087804;
+    border: solid 1px #979797;
+    border: solid 1px var(--warm-grey);
+}
+
+.Event-created {
+    width: auto;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 1.125em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding-top:3.5px;
+    margin-right:410px;
+    float:right;
+}
+
+.grey600 {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.The-event-has-been-c {
+    width: 308px;
+    height: 44px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin: 0 auto;
+}
+
+.Do-you-want-to-creat {
+    width: 242px;
+    height: 22px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin: 15px 0 auto;
+}
+
+.Rectangle-9 {
+    width: 140px;
+    height: 32px;
+    border-radius: 4.5px;
+    background-color: #d8d8d8;
+    border: solid 1px #979797;
+    border: solid 1px var(--warm-grey);
+    margin-left: 4em;
+    color: black;
+    font-weight: bold;
+    text-align:center;
+    padding-top:1%;
+}
+
+.Rectangle-91 {
+    width: 140px;
+    height: 32px;
+    border-radius: 4.5px;
+    background-color: #0158b4;
+    margin-left: 1.25em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.user-popup-center {
+    text-align: -webkit-center;
+}
+
+
+.Personal-Information {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 1.125em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.Rectangle-createfundform {
+    width: 140px;
+    height: 32px;
+    border-radius: 4.5px;
+    background-color: #0158b4;
+    color:#fff;
+}
+
+.Rectangle-cancelform {
+    width: 140px;
+    height: 32px;
+    border-radius: 4.5px;
+    background-color: #d8d8d8;
+    border: solid 1px #979797;
+    border: solid 1px var(--warm-grey);
+    color:black;
+    margin-right:20px;
+}
+
+.Remaining-charcters {
+    width: auto;
+    height: auto;
+    font-family: Roboto;
+    font-size: 0.5625em;
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+    text-align:right;
+    margin-top:6px;
+}
+
+    .Remaining-charcters .text-style-1 {
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.tab .nav-tabs {
+    border: none;
+    border-bottom: 2px solid #079fc9;
+    margin: 0;
+}
+
+    .tab .nav-tabs li a {
+        padding: 10px 20px;
+        margin: 0 10px -1px 0;
+        font-size: 17px;
+        font-weight: 600;
+        color: #293241;
+        text-transform: uppercase;
+        border: 2px solid #e6e5e1;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        z-index: 1;
+        position: relative;
+        transition: all 0.3s ease 0s;
+    }
+
+        .tab .nav-tabs li a:hover,
+        .tab .nav-tabs li.active a {
+            background: #fff;
+            color: #079fc9;
+            border: 2px solid #079fc9;
+            border-bottom-color: transparent;
+        }
+
+        .tab .nav-tabs li a:before {
+            content: "";
+            display: block;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .tab .nav-tabs li.active a:before,
+        .tab .nav-tabs li a:hover:before {
+            transform: scaleX(1);
+        }
+
+.tab .tab-content {
+    padding: 10px;
+    font-size: 17px;
+    color: #6f6f6f;
+    line-height: 30px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+@media only screen and (max-width: 479px) {
+    .tab .nav-tabs {
+        border: none;
+    }
+
+        .tab .nav-tabs li {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+            .tab .nav-tabs li a {
+                margin: 0;
+                border-bottom: 2px solid transparent;
+            }
+
+                .tab .nav-tabs li a:before {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background: #079fc9;
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                }
+}
+
+@media (max-width:768px) {
+    .Event-created {
+        margin-right: 240px;
+    }
+
+    .The-event-has-been-c {
+        margin-left: 2.5em;
+    }
+
+    .Do-you-want-to-creat {
+        margin-left: 4.031em;
+    }
+
+    .Rectangle-9 {
+        width: 120px;
+        margin-left: 0px;
+    }
+
+    .Rectangle-91 {
+        width: 120px;
+    }
+    .formtop {
+        padding-left: 0px;
+        background-color:#fff;
+    }
+    .form {
+        padding-left: 0px;
+    }
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DonateNeedyNewServiceLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DonateNeedyNewServiceLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfusp_CRUDtblDonations_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usp_CRUDtblDonations_Result" nillable="true" type="tns:usp_CRUDtblDonations_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusp_CRUDtblDonations_Result" nillable="true" type="tns:ArrayOfusp_CRUDtblDonations_Result" />
+  <xs:complexType name="usp_CRUDtblDonations_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EventID" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="anonymusdonor" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="anonymusname" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="donationAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="donationID" type="xs:int" />
+      <xs:element minOccurs="0" name="donationTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="emailID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailnotification" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="receivedAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="statusID" type="xs:int" />
+      <xs:element minOccurs="0" name="transactionChargeS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usp_CRUDtblDonations_Result" nillable="true" type="tns:usp_CRUDtblDonations_Result" />
+  <xs:complexType name="ArrayOfusp_CreateErrorLog_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usp_CreateErrorLog_Result" nillable="true" type="tns:usp_CreateErrorLog_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusp_CreateErrorLog_Result" nillable="true" type="tns:ArrayOfusp_CreateErrorLog_Result" />
+  <xs:complexType name="usp_CreateErrorLog_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorPage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="registrationid" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usp_CreateErrorLog_Result" nillable="true" type="tns:usp_CreateErrorLog_Result" />
+</xs:schema>

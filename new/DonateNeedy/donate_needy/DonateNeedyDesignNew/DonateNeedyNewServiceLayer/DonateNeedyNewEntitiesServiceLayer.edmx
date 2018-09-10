@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DonateNeedyNewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="usp_CreateErrorLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ErrorType" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ErrorMessage" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ErrorPage" Type="nvarchar" Mode="In" />
+          <Parameter Name="registrationid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CRUDtblDonations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="donationID" Type="int" Mode="In" />
+          <Parameter Name="donationTypeID" Type="int" Mode="In" />
+          <Parameter Name="EventID" Type="int" Mode="In" />
+          <Parameter Name="statusID" Type="int" Mode="In" />
+          <Parameter Name="donationAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="emailID" Type="nvarchar" Mode="In" />
+          <Parameter Name="PhoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="comments" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="transactionChargeS" Type="nvarchar" Mode="In" />
+          <Parameter Name="receivedAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="transactionID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="currency" Type="nvarchar" Mode="In" />
+          <Parameter Name="emailnotification" Type="bit" Mode="In" />
+          <Parameter Name="anonymusdonor" Type="bit" Mode="In" />
+          <Parameter Name="anonymusname" Type="bit" Mode="In" />
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="DonateNeedyNewModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DonateNeedyNewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DonateNeedyNewEntitiesServiceLayer" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="usp_CreateErrorLog" ReturnType="Collection(DonateNeedyNewModel.usp_CreateErrorLog_Result)">
+            <Parameter Name="ErrorType" Mode="In" Type="String" />
+            <Parameter Name="ErrorMessage" Mode="In" Type="String" />
+            <Parameter Name="ErrorPage" Mode="In" Type="String" />
+            <Parameter Name="registrationid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CRUDtblDonations" ReturnType="Collection(DonateNeedyNewModel.usp_CRUDtblDonations_Result)">
+            <Parameter Name="donationID" Mode="In" Type="Int32" />
+            <Parameter Name="donationTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="EventID" Mode="In" Type="Int32" />
+            <Parameter Name="statusID" Mode="In" Type="Int32" />
+            <Parameter Name="donationAmount" Mode="In" Type="String" />
+            <Parameter Name="emailID" Mode="In" Type="String" />
+            <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+            <Parameter Name="comments" Mode="In" Type="String" />
+            <Parameter Name="transactionChargeS" Mode="In" Type="String" />
+            <Parameter Name="receivedAmount" Mode="In" Type="String" />
+            <Parameter Name="transactionID" Mode="In" Type="String" />
+            <Parameter Name="currency" Mode="In" Type="String" />
+            <Parameter Name="emailnotification" Mode="In" Type="Boolean" />
+            <Parameter Name="anonymusdonor" Mode="In" Type="Boolean" />
+            <Parameter Name="anonymusname" Mode="In" Type="Boolean" />
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="usp_CreateErrorLog_Result">
+          <Property Type="String" Name="ErrorType" Nullable="true" />
+          <Property Type="String" Name="ErrorMessage" Nullable="true" />
+          <Property Type="String" Name="ErrorPage" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="registrationid" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_CRUDtblDonations_Result">
+          <Property Type="Int32" Name="donationID" Nullable="false" />
+          <Property Type="Int32" Name="donationTypeID" Nullable="true" />
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="statusID" Nullable="false" />
+          <Property Type="String" Name="Status" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="donationAmount" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="emailID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="comments" Nullable="true" />
+          <Property Type="String" Name="transactionChargeS" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="receivedAmount" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="transactionID" Nullable="true" />
+          <Property Type="String" Name="currency" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="emailnotification" Nullable="true" />
+          <Property Type="Boolean" Name="anonymusdonor" Nullable="true" />
+          <Property Type="Boolean" Name="anonymusname" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DonateNeedyNewModelStoreContainer" CdmEntityContainer="DonateNeedyNewEntitiesServiceLayer" >
+          <FunctionImportMapping FunctionImportName="usp_CreateErrorLog" FunctionName="DonateNeedyNewModel.Store.usp_CreateErrorLog">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CreateErrorLog_Result">
+                <ScalarProperty Name="ErrorType" ColumnName="ErrorType" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="ErrorPage" ColumnName="ErrorPage" />
+                <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_CRUDtblDonations" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblDonations">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblDonations_Result">
+                <ScalarProperty Name="donationID" ColumnName="donationID" />
+                <ScalarProperty Name="donationTypeID" ColumnName="donationTypeID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="statusID" ColumnName="statusID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="donationAmount" ColumnName="donationAmount" />
+                <ScalarProperty Name="emailID" ColumnName="emailID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="transactionChargeS" ColumnName="transactionChargeS" />
+                <ScalarProperty Name="receivedAmount" ColumnName="receivedAmount" />
+                <ScalarProperty Name="transactionID" ColumnName="transactionID" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="emailnotification" ColumnName="emailnotification" />
+                <ScalarProperty Name="anonymusdonor" ColumnName="anonymusdonor" />
+                <ScalarProperty Name="anonymusname" ColumnName="anonymusname" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

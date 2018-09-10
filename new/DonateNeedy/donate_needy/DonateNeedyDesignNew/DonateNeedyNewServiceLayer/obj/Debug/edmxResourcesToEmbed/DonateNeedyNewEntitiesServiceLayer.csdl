@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DonateNeedyNewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DonateNeedyNewEntitiesServiceLayer" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="usp_CreateErrorLog" ReturnType="Collection(DonateNeedyNewModel.usp_CreateErrorLog_Result)">
+      <Parameter Name="ErrorType" Mode="In" Type="String" />
+      <Parameter Name="ErrorMessage" Mode="In" Type="String" />
+      <Parameter Name="ErrorPage" Mode="In" Type="String" />
+      <Parameter Name="registrationid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_CRUDtblDonations" ReturnType="Collection(DonateNeedyNewModel.usp_CRUDtblDonations_Result)">
+      <Parameter Name="donationID" Mode="In" Type="Int32" />
+      <Parameter Name="donationTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="EventID" Mode="In" Type="Int32" />
+      <Parameter Name="statusID" Mode="In" Type="Int32" />
+      <Parameter Name="donationAmount" Mode="In" Type="String" />
+      <Parameter Name="emailID" Mode="In" Type="String" />
+      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="comments" Mode="In" Type="String" />
+      <Parameter Name="transactionChargeS" Mode="In" Type="String" />
+      <Parameter Name="receivedAmount" Mode="In" Type="String" />
+      <Parameter Name="transactionID" Mode="In" Type="String" />
+      <Parameter Name="currency" Mode="In" Type="String" />
+      <Parameter Name="emailnotification" Mode="In" Type="Boolean" />
+      <Parameter Name="anonymusdonor" Mode="In" Type="Boolean" />
+      <Parameter Name="anonymusname" Mode="In" Type="Boolean" />
+      <Parameter Name="registrationID" Mode="In" Type="Int32" />
+      <Parameter Name="Mode" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="usp_CreateErrorLog_Result">
+    <Property Type="String" Name="ErrorType" Nullable="true" />
+    <Property Type="String" Name="ErrorMessage" Nullable="true" />
+    <Property Type="String" Name="ErrorPage" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="registrationid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_CRUDtblDonations_Result">
+    <Property Type="Int32" Name="donationID" Nullable="false" />
+    <Property Type="Int32" Name="donationTypeID" Nullable="true" />
+    <Property Type="Int32" Name="EventID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="statusID" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="donationAmount" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="emailID" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="comments" Nullable="true" />
+    <Property Type="String" Name="transactionChargeS" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="receivedAmount" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="transactionID" Nullable="true" />
+    <Property Type="String" Name="currency" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="emailnotification" Nullable="true" />
+    <Property Type="Boolean" Name="anonymusdonor" Nullable="true" />
+    <Property Type="Boolean" Name="anonymusname" Nullable="true" />
+  </ComplexType>
+</Schema>

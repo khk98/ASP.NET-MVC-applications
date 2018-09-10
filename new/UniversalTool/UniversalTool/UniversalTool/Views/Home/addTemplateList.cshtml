@@ -1,0 +1,200 @@
+﻿
+@{
+    ViewBag.Title = "addTemplateList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model UniversalTool.Models.Schema
+@{
+    ViewBag.Title = "CreateTemplate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="/Home/Index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="/Home/ConnectDatabase"><i class="fa fa-bar-chart-o fa-fw"></i> Connect Database</a>
+
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-table fa-fw"></i> Create Template</a>
+            </li>
+            <li>
+                <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="panels-wells.html">Panels and Wells</a>
+                    </li>
+                    <li>
+                        <a href="buttons.html">Buttons</a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">Notifications</a>
+                    </li>
+                    <li>
+                        <a href="typography.html">Typography</a>
+                    </li>
+                    <li>
+                        <a href="icons.html"> Icons</a>
+                    </li>
+                    <li>
+                        <a href="grid.html">Grid</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#">Second Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Second Level Item</a>
+                    </li>
+                    <li>
+                        <a href="#">Third Level <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Item</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-third-level -->
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="blank.html">Blank Page</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Login Page</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Create Template</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+        <!-- Stepper -->
+        <div class="steps-form-2">
+            <div class="steps-row-2 setup-panel-2 d-flex justify-content-between">
+                <div class="steps-step-2">
+                    <a href="/Home/CreateTemplate" type="button" class="btn btn-amber btn-circle-2 waves-effect ml-0" data-toggle="tooltip" data-placement="top" title="Basic Information"><i class="fa fa-folder-open-o" aria-hidden="true"></i></a>
+                </div>
+                <div class="steps-step-2">
+                    <a href="#step-2" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Personal Data"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                </div>
+                <div class="steps-step-2">
+                    <a href="#step-3" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Terms and Conditions"><i class="fa fa-photo" aria-hidden="true"></i></a>
+                </div>
+                <div class="steps-step-2">
+                    <a href="#step-4" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" data-toggle="tooltip" data-placement="top" title="Finish"><i class="fa fa-check" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- First Step -->
+
+        <div class="container">
+
+            <div class="row">
+
+
+                <div class="col-md-4 col-md-offset-2">
+                    <div class=" panel panel-default" style="height : auto inherit">
+                        <div class="panel-heading" style="background-color :#4bd087">
+                            <h3 class="panel-title" style="color:white ">Schema Information</h3>
+                        </div>
+                        <div class="panel-body">
+
+                        </div>
+                        <div class="form-group md-form dropdown ">
+                            @Html.LabelFor(s => s.Schema_name)
+                            <div class="col-md-offset-1">
+                                @Html.DropDownListFor(model => model.SchemaList, new SelectList(Model.SchemaList), new { @class = "btn btn-default dropdown-toggle", @id = "selectedOption", @onchange = "setSelected()", style = "width: 230px;" })
+                            </div>
+
+                        </div>
+
+
+                        <div class=" ">
+                            @Html.LabelFor(s => s.Template)
+                            <div class="form-group md-form ">
+                                <div>
+
+                                    <div class="col-md-6 col-md-offset-8">
+                                        <button type="button" class="fa-border " data-toggle="modal" data-target="#myModal" onclick="setSelected()">View</button>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Modal Header</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="col-md-offset-1">
+                                                        @Html.DropDownListFor(model => model.TemplateList, new SelectList(Model.TemplateList), new { @class = "btn btn-default dropdown-toggle", style = "width: 230px;" })
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    @Html.TextBoxFor(s => s.Template, new { style = "border:1px solid #2AD18D;border-radius:5px;height: 30px;width: 300px;padding= 40px" })
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-lg  btn-block btn-success" type="button">Next</button>
+                            <!-- Stepper -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/JQuery/Common.js"></script>
+</div>
+

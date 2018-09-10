@@ -1,0 +1,2858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DonateNeedyNewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAuthentication">
+          <Key>
+            <PropertyRef Name="authenticationID" />
+          </Key>
+          <Property Name="authenticationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="registrationID" Type="int" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblCategory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblCharity">
+          <Key>
+            <PropertyRef Name="charityTypeId" />
+          </Key>
+          <Property Name="charityTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="eventId" Type="int" Nullable="false" />
+          <Property Name="charityName" Type="nvarchar(max)" />
+          <Property Name="charityIdentificationNumber" Type="nvarchar" MaxLength="200" />
+          <Property Name="charityPersonOfContact" Type="nvarchar" MaxLength="100" />
+          <Property Name="charityPhoneNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="charityEmailId" Type="nvarchar" MaxLength="100" />
+          <Property Name="charityCountryId" Type="int" Nullable="false" />
+          <Property Name="charityStateId" Type="int" Nullable="false" />
+          <Property Name="charityCityId" Type="int" Nullable="false" />
+          <Property Name="charityAddress" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="updatedDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblCity">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="isactive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblContactUs">
+          <Key>
+            <PropertyRef Name="ContactUsID" />
+          </Key>
+          <Property Name="ContactUsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="registrationid" Type="int" />
+        </EntityType>
+        <EntityType Name="tblCountry">
+          <Key>
+            <PropertyRef Name="countryID" />
+          </Key>
+          <Property Name="countryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="countryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblDonations">
+          <Key>
+            <PropertyRef Name="donationID" />
+          </Key>
+          <Property Name="donationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventID" Type="int" />
+          <Property Name="statusID" Type="int" />
+          <Property Name="donationAmount" Type="nvarchar" MaxLength="100" />
+          <Property Name="emailID" Type="nvarchar" MaxLength="100" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="comments" Type="nvarchar(max)" />
+          <Property Name="transactionChargeS" Type="nvarchar" MaxLength="100" />
+          <Property Name="receivedAmount" Type="nvarchar" MaxLength="100" />
+          <Property Name="transactionID" Type="nvarchar(max)" />
+          <Property Name="currency" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="donationTypeID" Type="int" />
+          <Property Name="registrationID" Type="int" />
+          <Property Name="emailnotification" Type="bit" />
+          <Property Name="anonymusdonor" Type="bit" />
+          <Property Name="anonymusname" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblDonationType">
+          <Key>
+            <PropertyRef Name="donationTypeID" />
+          </Key>
+          <Property Name="donationTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="donationType" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblEmailTemplateSave">
+          <Key>
+            <PropertyRef Name="emailTemplateId" />
+          </Key>
+          <Property Name="emailTemplateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="registrationId" Type="int" Nullable="false" />
+          <Property Name="templateName" Type="nvarchar" MaxLength="100" />
+          <Property Name="templateSubject" Type="nvarchar" MaxLength="100" />
+          <Property Name="templateBody" Type="nvarchar(max)" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblErrorlog">
+          <Key>
+            <PropertyRef Name="ErrorID" />
+          </Key>
+          <Property Name="ErrorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ErrorType" Type="nvarchar(max)" />
+          <Property Name="ErrorMessage" Type="nvarchar(max)" />
+          <Property Name="ErrorPage" Type="nvarchar" MaxLength="500" />
+          <Property Name="OccuredDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="registrationid" Type="int" />
+        </EntityType>
+        <EntityType Name="tblEvent">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="registrationID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="categoryID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="Venue" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="confirmed" Type="bit" />
+          <Property Name="targetAmount" Type="nvarchar" MaxLength="100" />
+          <Property Name="collectedAmount" Type="nvarchar" MaxLength="100" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="reasonForRejecting" Type="nvarchar(max)" />
+          <Property Name="Approval" Type="bit" />
+          <Property Name="Video" Type="nvarchar" MaxLength="200" />
+          <Property Name="BenificiaryType" Type="nvarchar" MaxLength="20" />
+          <Property Name="OrganiserName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblFeedback">
+          <Key>
+            <PropertyRef Name="feedbackID" />
+          </Key>
+          <Property Name="feedbackID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="feedbackReasonID" Type="int" />
+          <Property Name="userFeedback" Type="nvarchar(max)" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+          <Property Name="Rating" Type="int" />
+        </EntityType>
+        <EntityType Name="tblFeedbackReasons">
+          <Key>
+            <PropertyRef Name="feedbackReasonID" />
+          </Key>
+          <Property Name="feedbackReasonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="feedbackReason" Type="nvarchar" MaxLength="500" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblRegistration">
+          <Key>
+            <PropertyRef Name="registrationID" />
+          </Key>
+          <Property Name="registrationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userTypeID" Type="int" />
+          <Property Name="countryID" Type="int" />
+          <Property Name="stateID" Type="int" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="emailID" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="15" />
+          <Property Name="profilePicture" Type="nvarchar(max)" />
+          <Property Name="emailConfirmed" Type="bit" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+          <Property Name="cityid" Type="int" />
+          <Property Name="middleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="titleId" Type="int" />
+        </EntityType>
+        <EntityType Name="tblState">
+          <Key>
+            <PropertyRef Name="stateID" />
+          </Key>
+          <Property Name="stateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="countryId" Type="int" />
+          <Property Name="stateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblStatus">
+          <Key>
+            <PropertyRef Name="statusID" />
+          </Key>
+          <Property Name="statusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblSubscribe">
+          <Key>
+            <PropertyRef Name="SubscriptionID" />
+          </Key>
+          <Property Name="SubscriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="feedback" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="registrationid" Type="int" />
+        </EntityType>
+        <EntityType Name="tblTestimonial">
+          <Key>
+            <PropertyRef Name="TestimonialID" />
+          </Key>
+          <Property Name="TestimonialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="registrationID" Type="int" Nullable="false" />
+          <Property Name="Testimonial" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="Confirmed" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblTitle">
+          <Key>
+            <PropertyRef Name="titleId" />
+          </Key>
+          <Property Name="titleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="10" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblUserType">
+          <Key>
+            <PropertyRef Name="userTypeID" />
+          </Key>
+          <Property Name="userTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userType" Type="nvarchar" MaxLength="50" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="createdBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedDate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__tblCharit__chari__640DD89F">
+          <End Role="tblCountry" Type="Self.tblCountry" Multiplicity="1" />
+          <End Role="tblCharity" Type="Self.tblCharity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCountry">
+              <PropertyRef Name="countryID" />
+            </Principal>
+            <Dependent Role="tblCharity">
+              <PropertyRef Name="charityCountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblCharit__chari__6501FCD8">
+          <End Role="tblState" Type="Self.tblState" Multiplicity="1" />
+          <End Role="tblCharity" Type="Self.tblCharity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblState">
+              <PropertyRef Name="stateID" />
+            </Principal>
+            <Dependent Role="tblCharity">
+              <PropertyRef Name="charityStateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblCharit__chari__65F62111">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="1" />
+          <End Role="tblCharity" Type="Self.tblCharity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblCharity">
+              <PropertyRef Name="charityCityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblCharit__event__66EA454A">
+          <End Role="tblEvent" Type="Self.tblEvent" Multiplicity="1" />
+          <End Role="tblCharity" Type="Self.tblCharity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEvent">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="tblCharity">
+              <PropertyRef Name="eventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblContac__regis__1699586C">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblContactUs" Type="Self.tblContactUs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblContactUs">
+              <PropertyRef Name="registrationid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblDonati__donat__24285DB4">
+          <End Role="tblDonationType" Type="Self.tblDonationType" Multiplicity="0..1" />
+          <End Role="tblDonations" Type="Self.tblDonations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDonationType">
+              <PropertyRef Name="donationTypeID" />
+            </Principal>
+            <Dependent Role="tblDonations">
+              <PropertyRef Name="donationTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblDonati__Event__0F2D40CE">
+          <End Role="tblEvent" Type="Self.tblEvent" Multiplicity="0..1" />
+          <End Role="tblDonations" Type="Self.tblDonations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEvent">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="tblDonations">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblDonati__regis__2F9A1060">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblDonations" Type="Self.tblDonations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblDonations">
+              <PropertyRef Name="registrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblDonati__Statu__10216507">
+          <End Role="tblStatus" Type="Self.tblStatus" Multiplicity="0..1" />
+          <End Role="tblDonations" Type="Self.tblDonations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStatus">
+              <PropertyRef Name="statusID" />
+            </Principal>
+            <Dependent Role="tblDonations">
+              <PropertyRef Name="statusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblEmailT__regis__0EF836A4">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="1" />
+          <End Role="tblEmailTemplateSave" Type="Self.tblEmailTemplateSave" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblEmailTemplateSave">
+              <PropertyRef Name="registrationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblErrorl__regis__178D7CA5">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblErrorlog" Type="Self.tblErrorlog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblErrorlog">
+              <PropertyRef Name="registrationid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblFeedba__feedb__2FCF1A8A">
+          <End Role="tblFeedbackReasons" Type="Self.tblFeedbackReasons" Multiplicity="0..1" />
+          <End Role="tblFeedback" Type="Self.tblFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblFeedbackReasons">
+              <PropertyRef Name="feedbackReasonID" />
+            </Principal>
+            <Dependent Role="tblFeedback">
+              <PropertyRef Name="feedbackReasonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__cityi__2CBDA3B5">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="cityid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__cityi__2DB1C7EE">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="cityid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__cityi__59C55456">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="cityid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__cityi__6166761E">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="cityid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__title__7073AF84">
+          <End Role="tblTitle" Type="Self.tblTitle" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTitle">
+              <PropertyRef Name="titleId" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="titleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblSubscr__regis__2022C2A6">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblSubscribe" Type="Self.tblSubscribe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblSubscribe">
+              <PropertyRef Name="registrationid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblAuthentication_tblRegistration">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblAuthentication" Type="Self.tblAuthentication" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblAuthentication">
+              <PropertyRef Name="registrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblCity_tblstate">
+          <End Role="tblState" Type="Self.tblState" Multiplicity="0..1" />
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblState">
+              <PropertyRef Name="stateID" />
+            </Principal>
+            <Dependent Role="tblCity">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblEvent_tblCategory">
+          <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="1" />
+          <End Role="tblEvent" Type="Self.tblEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCategory">
+              <PropertyRef Name="categoryID" />
+            </Principal>
+            <Dependent Role="tblEvent">
+              <PropertyRef Name="categoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblEvent_tblRegistration">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="1" />
+          <End Role="tblEvent" Type="Self.tblEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblEvent">
+              <PropertyRef Name="registrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRegistration_tblCountry">
+          <End Role="tblCountry" Type="Self.tblCountry" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCountry">
+              <PropertyRef Name="countryID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="countryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRegistration_tblState">
+          <End Role="tblState" Type="Self.tblState" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblState">
+              <PropertyRef Name="stateID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="stateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRegistration_tblUserType">
+          <End Role="tblUserType" Type="Self.tblUserType" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUserType">
+              <PropertyRef Name="userTypeID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="userTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblState_tblCountry">
+          <End Role="tblCountry" Type="Self.tblCountry" Multiplicity="0..1" />
+          <End Role="tblState" Type="Self.tblState" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCountry">
+              <PropertyRef Name="countryID" />
+            </Principal>
+            <Dependent Role="tblState">
+              <PropertyRef Name="countryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTestimonial_tblRegistration">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="1" />
+          <End Role="tblTestimonial" Type="Self.tblTestimonial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblTestimonial">
+              <PropertyRef Name="registrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="usp_ChangePassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+          <Parameter Name="OldPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CheckCredentials" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="emailID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password" Type="nvarchar" Mode="In" />
+          <Parameter Name="outputCount" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="usp_checkFundRaisedCompletedOrNot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FundRaisingID" Type="int" Mode="In" />
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CRUDCloseSwitch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="eventID" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CRUDtblContactUs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="contactUsID" Type="int" Mode="In" />
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="emailID" Type="nvarchar" Mode="In" />
+          <Parameter Name="PhoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="message" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="registrationid" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CRUDtblEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="eventID" Type="int" Mode="In" />
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+          <Parameter Name="categoryID" Type="int" Mode="In" />
+          <Parameter Name="description" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="image" Type="nvarchar" Mode="In" />
+          <Parameter Name="startDate" Type="datetime" Mode="In" />
+          <Parameter Name="endDate" Type="datetime" Mode="In" />
+          <Parameter Name="countryID" Type="int" Mode="In" />
+          <Parameter Name="stateID" Type="int" Mode="In" />
+          <Parameter Name="cityid" Type="int" Mode="In" />
+          <Parameter Name="venue" Type="nvarchar" Mode="In" />
+          <Parameter Name="confirmed" Type="bit" Mode="In" />
+          <Parameter Name="targetAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="collectedAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="reasonForRejecting" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="approval" Type="bit" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CRUDtblEventNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+          <Parameter Name="Title" Type="nvarchar" Mode="In" />
+          <Parameter Name="categoryID" Type="int" Mode="In" />
+          <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="image" Type="nvarchar" Mode="In" />
+          <Parameter Name="startDate" Type="datetime" Mode="In" />
+          <Parameter Name="endDate" Type="datetime" Mode="In" />
+          <Parameter Name="venue" Type="nvarchar" Mode="In" />
+          <Parameter Name="confirmed" Type="bit" Mode="In" />
+          <Parameter Name="targetAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="collectedAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="reasonForRejecting" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="approval" Type="bit" Mode="In" />
+          <Parameter Name="video" Type="nvarchar" Mode="In" />
+          <Parameter Name="benificiaryType" Type="nvarchar" Mode="In" />
+          <Parameter Name="organiserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="EventID" Type="int" Mode="In" />
+          <Parameter Name="charityName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="charityIdentificationNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="charityPersonOfContact" Type="nvarchar" Mode="In" />
+          <Parameter Name="charityPhoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="charityEmailId" Type="nvarchar" Mode="In" />
+          <Parameter Name="charityCountryID" Type="int" Mode="In" />
+          <Parameter Name="charityStateID" Type="int" Mode="In" />
+          <Parameter Name="charityCityid" Type="int" Mode="In" />
+          <Parameter Name="charityAddress" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CRUDtblRegistation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+          <Parameter Name="userTypeID" Type="int" Mode="In" />
+          <Parameter Name="countryID" Type="int" Mode="In" />
+          <Parameter Name="stateID" Type="int" Mode="In" />
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastName" Type="nvarchar" Mode="In" />
+          <Parameter Name="emailID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password" Type="nvarchar" Mode="In" />
+          <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Cityid" Type="int" Mode="In" />
+          <Parameter Name="Pincode" Type="nvarchar" Mode="In" />
+          <Parameter Name="profilePicture" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="emailConfirmed" Type="bit" Mode="In" />
+          <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="middlename" Type="nvarchar" Mode="In" />
+          <Parameter Name="titleid" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CRUDUserImgSave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+          <Parameter Name="profilePicture" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CURDUserProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+          <Parameter Name="userTypeID" Type="int" Mode="In" />
+          <Parameter Name="countryID" Type="int" Mode="In" />
+          <Parameter Name="stateID" Type="int" Mode="In" />
+          <Parameter Name="firstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="emailID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="City" Type="nvarchar" Mode="In" />
+          <Parameter Name="Pincode" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_emergency" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="categoryID" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getApprovalCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getApprovalData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_getCountryNames" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_GetEmailConfirm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getEventsData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EventID" Type="int" Mode="In" />
+          <Parameter Name="categoryID" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getFilterEvents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="categoryID" Type="int" Mode="In" />
+          <Parameter Name="mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getFundraisingdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FundRaisingID" Type="int" Mode="In" />
+          <Parameter Name="categoryID" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getFundraisingEventsData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getHappyPeopleCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_GetRecordsByEventIDOrFundraiserName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EventID" Type="int" Mode="In" />
+          <Parameter Name="OrganiserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="categoryID" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getTestimonialdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_getTitleNames" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_getUserDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_getUsersData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_insertFeedback" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="feedbackID" Type="int" Mode="In" />
+          <Parameter Name="feedbackReasonID" Type="int" Mode="In" />
+          <Parameter Name="userFeedback" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Rating" Type="int" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_InserttblTestimonial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TestimonialID" Type="int" Mode="In" />
+          <Parameter Name="registrationID" Type="int" Mode="In" />
+          <Parameter Name="Testimonial" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_RandomPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="emailID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_tblEmailTemplateSave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationId" Type="int" Mode="In" />
+          <Parameter Name="templateName" Type="nvarchar" Mode="In" />
+          <Parameter Name="templateSubject" Type="nvarchar" Mode="In" />
+          <Parameter Name="templateBody" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="mode" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_tblSubscribe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registrationId" Type="int" Mode="In" />
+          <Parameter Name="feedback" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="usp_ValidateMemberWithPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="emailID" Type="nvarchar" Mode="In" />
+          <Parameter Name="PassWord" Type="nvarchar" Mode="In" />
+          <Parameter Name="outputCount" Type="int" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="DonateNeedyNewModelStoreContainer">
+          <EntitySet Name="tblAuthentication" EntityType="Self.tblAuthentication" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCategory" EntityType="Self.tblCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCharity" EntityType="Self.tblCharity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCity" EntityType="Self.tblCity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblContactUs" EntityType="Self.tblContactUs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCountry" EntityType="Self.tblCountry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDonations" EntityType="Self.tblDonations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDonationType" EntityType="Self.tblDonationType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEmailTemplateSave" EntityType="Self.tblEmailTemplateSave" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblErrorlog" EntityType="Self.tblErrorlog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEvent" EntityType="Self.tblEvent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFeedback" EntityType="Self.tblFeedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFeedbackReasons" EntityType="Self.tblFeedbackReasons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblRegistration" EntityType="Self.tblRegistration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblState" EntityType="Self.tblState" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStatus" EntityType="Self.tblStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSubscribe" EntityType="Self.tblSubscribe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTestimonial" EntityType="Self.tblTestimonial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTitle" EntityType="Self.tblTitle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUserType" EntityType="Self.tblUserType" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tblCharit__chari__640DD89F" Association="Self.FK__tblCharit__chari__640DD89F">
+            <End Role="tblCountry" EntitySet="tblCountry" />
+            <End Role="tblCharity" EntitySet="tblCharity" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblCharit__chari__6501FCD8" Association="Self.FK__tblCharit__chari__6501FCD8">
+            <End Role="tblState" EntitySet="tblState" />
+            <End Role="tblCharity" EntitySet="tblCharity" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblCharit__chari__65F62111" Association="Self.FK__tblCharit__chari__65F62111">
+            <End Role="tblCity" EntitySet="tblCity" />
+            <End Role="tblCharity" EntitySet="tblCharity" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblCharit__event__66EA454A" Association="Self.FK__tblCharit__event__66EA454A">
+            <End Role="tblEvent" EntitySet="tblEvent" />
+            <End Role="tblCharity" EntitySet="tblCharity" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblContac__regis__1699586C" Association="Self.FK__tblContac__regis__1699586C">
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+            <End Role="tblContactUs" EntitySet="tblContactUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblDonati__donat__24285DB4" Association="Self.FK__tblDonati__donat__24285DB4">
+            <End Role="tblDonationType" EntitySet="tblDonationType" />
+            <End Role="tblDonations" EntitySet="tblDonations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblDonati__Event__0F2D40CE" Association="Self.FK__tblDonati__Event__0F2D40CE">
+            <End Role="tblEvent" EntitySet="tblEvent" />
+            <End Role="tblDonations" EntitySet="tblDonations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblDonati__regis__2F9A1060" Association="Self.FK__tblDonati__regis__2F9A1060">
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+            <End Role="tblDonations" EntitySet="tblDonations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblDonati__Statu__10216507" Association="Self.FK__tblDonati__Statu__10216507">
+            <End Role="tblStatus" EntitySet="tblStatus" />
+            <End Role="tblDonations" EntitySet="tblDonations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblEmailT__regis__0EF836A4" Association="Self.FK__tblEmailT__regis__0EF836A4">
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+            <End Role="tblEmailTemplateSave" EntitySet="tblEmailTemplateSave" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblErrorl__regis__178D7CA5" Association="Self.FK__tblErrorl__regis__178D7CA5">
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+            <End Role="tblErrorlog" EntitySet="tblErrorlog" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblFeedba__feedb__2FCF1A8A" Association="Self.FK__tblFeedba__feedb__2FCF1A8A">
+            <End Role="tblFeedbackReasons" EntitySet="tblFeedbackReasons" />
+            <End Role="tblFeedback" EntitySet="tblFeedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__cityi__2CBDA3B5" Association="Self.FK__tblRegist__cityi__2CBDA3B5">
+            <End Role="tblCity" EntitySet="tblCity" />
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__cityi__2DB1C7EE" Association="Self.FK__tblRegist__cityi__2DB1C7EE">
+            <End Role="tblCity" EntitySet="tblCity" />
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__cityi__59C55456" Association="Self.FK__tblRegist__cityi__59C55456">
+            <End Role="tblCity" EntitySet="tblCity" />
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__cityi__6166761E" Association="Self.FK__tblRegist__cityi__6166761E">
+            <End Role="tblCity" EntitySet="tblCity" />
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__title__7073AF84" Association="Self.FK__tblRegist__title__7073AF84">
+            <End Role="tblTitle" EntitySet="tblTitle" />
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblSubscr__regis__2022C2A6" Association="Self.FK__tblSubscr__regis__2022C2A6">
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+            <End Role="tblSubscribe" EntitySet="tblSubscribe" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblAuthentication_tblRegistration" Association="Self.FK_tblAuthentication_tblRegistration">
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+            <End Role="tblAuthentication" EntitySet="tblAuthentication" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblCity_tblstate" Association="Self.FK_tblCity_tblstate">
+            <End Role="tblState" EntitySet="tblState" />
+            <End Role="tblCity" EntitySet="tblCity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblEvent_tblCategory" Association="Self.FK_tblEvent_tblCategory">
+            <End Role="tblCategory" EntitySet="tblCategory" />
+            <End Role="tblEvent" EntitySet="tblEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblEvent_tblRegistration" Association="Self.FK_tblEvent_tblRegistration">
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+            <End Role="tblEvent" EntitySet="tblEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRegistration_tblCountry" Association="Self.FK_tblRegistration_tblCountry">
+            <End Role="tblCountry" EntitySet="tblCountry" />
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRegistration_tblState" Association="Self.FK_tblRegistration_tblState">
+            <End Role="tblState" EntitySet="tblState" />
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRegistration_tblUserType" Association="Self.FK_tblRegistration_tblUserType">
+            <End Role="tblUserType" EntitySet="tblUserType" />
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblState_tblCountry" Association="Self.FK_tblState_tblCountry">
+            <End Role="tblCountry" EntitySet="tblCountry" />
+            <End Role="tblState" EntitySet="tblState" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTestimonial_tblRegistration" Association="Self.FK_tblTestimonial_tblRegistration">
+            <End Role="tblRegistration" EntitySet="tblRegistration" />
+            <End Role="tblTestimonial" EntitySet="tblTestimonial" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DonateNeedyNewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblAuthentication">
+          <Key>
+            <PropertyRef Name="authenticationID" />
+          </Key>
+          <Property Name="authenticationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="registrationID" Type="Int32" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblRegistration" Relationship="Self.FK_tblAuthentication_tblRegistration" FromRole="tblAuthentication" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblCategory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblEvents" Relationship="Self.FK_tblEvent_tblCategory" FromRole="tblCategory" ToRole="tblEvent" />
+        </EntityType>
+        <EntityType Name="tblCharity">
+          <Key>
+            <PropertyRef Name="charityTypeId" />
+          </Key>
+          <Property Name="charityTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="eventId" Type="Int32" Nullable="false" />
+          <Property Name="charityName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="charityIdentificationNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="charityPersonOfContact" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="charityPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="charityEmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="charityCountryId" Type="Int32" Nullable="false" />
+          <Property Name="charityStateId" Type="Int32" Nullable="false" />
+          <Property Name="charityCityId" Type="Int32" Nullable="false" />
+          <Property Name="charityAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="createdBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblCountry" Relationship="Self.FK__tblCharit__chari__640DD89F" FromRole="tblCharity" ToRole="tblCountry" />
+          <NavigationProperty Name="tblState" Relationship="Self.FK__tblCharit__chari__6501FCD8" FromRole="tblCharity" ToRole="tblState" />
+          <NavigationProperty Name="tblCity" Relationship="Self.FK__tblCharit__chari__65F62111" FromRole="tblCharity" ToRole="tblCity" />
+          <NavigationProperty Name="tblEvent" Relationship="Self.FK__tblCharit__event__66EA454A" FromRole="tblCharity" ToRole="tblEvent" />
+        </EntityType>
+        <EntityType Name="tblCity">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="isactive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblCharities" Relationship="Self.FK__tblCharit__chari__65F62111" FromRole="tblCity" ToRole="tblCharity" />
+          <NavigationProperty Name="tblRegistrations" Relationship="Self.FK__tblRegist__cityi__2CBDA3B5" FromRole="tblCity" ToRole="tblRegistration" />
+          <NavigationProperty Name="tblRegistrations1" Relationship="Self.FK__tblRegist__cityi__2DB1C7EE" FromRole="tblCity" ToRole="tblRegistration" />
+          <NavigationProperty Name="tblRegistrations2" Relationship="Self.FK__tblRegist__cityi__59C55456" FromRole="tblCity" ToRole="tblRegistration" />
+          <NavigationProperty Name="tblRegistrations3" Relationship="Self.FK__tblRegist__cityi__6166761E" FromRole="tblCity" ToRole="tblRegistration" />
+          <NavigationProperty Name="tblState" Relationship="Self.FK_tblCity_tblstate" FromRole="tblCity" ToRole="tblState" />
+        </EntityType>
+        <EntityType Name="tblContactU">
+          <Key>
+            <PropertyRef Name="ContactUsID" />
+          </Key>
+          <Property Name="ContactUsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="registrationid" Type="Int32" />
+          <NavigationProperty Name="tblRegistration" Relationship="Self.FK__tblContac__regis__1699586C" FromRole="tblContactUs" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblCountry">
+          <Key>
+            <PropertyRef Name="countryID" />
+          </Key>
+          <Property Name="countryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="countryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblCharities" Relationship="Self.FK__tblCharit__chari__640DD89F" FromRole="tblCountry" ToRole="tblCharity" />
+          <NavigationProperty Name="tblRegistrations" Relationship="Self.FK_tblRegistration_tblCountry" FromRole="tblCountry" ToRole="tblRegistration" />
+          <NavigationProperty Name="tblStates" Relationship="Self.FK_tblState_tblCountry" FromRole="tblCountry" ToRole="tblState" />
+        </EntityType>
+        <EntityType Name="tblDonation">
+          <Key>
+            <PropertyRef Name="donationID" />
+          </Key>
+          <Property Name="donationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="Int32" />
+          <Property Name="statusID" Type="Int32" />
+          <Property Name="donationAmount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="emailID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="transactionChargeS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="receivedAmount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="transactionID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="currency" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="donationTypeID" Type="Int32" />
+          <Property Name="registrationID" Type="Int32" />
+          <Property Name="emailnotification" Type="Boolean" />
+          <Property Name="anonymusdonor" Type="Boolean" />
+          <Property Name="anonymusname" Type="Boolean" />
+          <NavigationProperty Name="tblDonationType" Relationship="Self.FK__tblDonati__donat__24285DB4" FromRole="tblDonations" ToRole="tblDonationType" />
+          <NavigationProperty Name="tblEvent" Relationship="Self.FK__tblDonati__Event__0F2D40CE" FromRole="tblDonations" ToRole="tblEvent" />
+          <NavigationProperty Name="tblRegistration" Relationship="Self.FK__tblDonati__regis__2F9A1060" FromRole="tblDonations" ToRole="tblRegistration" />
+          <NavigationProperty Name="tblStatu" Relationship="Self.FK__tblDonati__Statu__10216507" FromRole="tblDonations" ToRole="tblStatus" />
+        </EntityType>
+        <EntityType Name="tblDonationType">
+          <Key>
+            <PropertyRef Name="donationTypeID" />
+          </Key>
+          <Property Name="donationTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="donationType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblDonations" Relationship="Self.FK__tblDonati__donat__24285DB4" FromRole="tblDonationType" ToRole="tblDonations" />
+        </EntityType>
+        <EntityType Name="tblEmailTemplateSave">
+          <Key>
+            <PropertyRef Name="emailTemplateId" />
+          </Key>
+          <Property Name="emailTemplateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="registrationId" Type="Int32" Nullable="false" />
+          <Property Name="templateName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="templateSubject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="templateBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblRegistration" Relationship="Self.FK__tblEmailT__regis__0EF836A4" FromRole="tblEmailTemplateSave" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblErrorlog">
+          <Key>
+            <PropertyRef Name="ErrorID" />
+          </Key>
+          <Property Name="ErrorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ErrorType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorPage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OccuredDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="registrationid" Type="Int32" />
+          <NavigationProperty Name="tblRegistration" Relationship="Self.FK__tblErrorl__regis__178D7CA5" FromRole="tblErrorlog" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblEvent">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="registrationID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="categoryID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Venue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="confirmed" Type="Boolean" />
+          <Property Name="targetAmount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="collectedAmount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="reasonForRejecting" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Approval" Type="Boolean" />
+          <Property Name="Video" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BenificiaryType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OrganiserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblCategory" Relationship="Self.FK_tblEvent_tblCategory" FromRole="tblEvent" ToRole="tblCategory" />
+          <NavigationProperty Name="tblCharities" Relationship="Self.FK__tblCharit__event__66EA454A" FromRole="tblEvent" ToRole="tblCharity" />
+          <NavigationProperty Name="tblDonations" Relationship="Self.FK__tblDonati__Event__0F2D40CE" FromRole="tblEvent" ToRole="tblDonations" />
+          <NavigationProperty Name="tblRegistration" Relationship="Self.FK_tblEvent_tblRegistration" FromRole="tblEvent" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblFeedback">
+          <Key>
+            <PropertyRef Name="feedbackID" />
+          </Key>
+          <Property Name="feedbackID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="feedbackReasonID" Type="Int32" />
+          <Property Name="userFeedback" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Rating" Type="Int32" />
+          <NavigationProperty Name="tblFeedbackReason" Relationship="Self.FK__tblFeedba__feedb__2FCF1A8A" FromRole="tblFeedback" ToRole="tblFeedbackReasons" />
+        </EntityType>
+        <EntityType Name="tblFeedbackReason">
+          <Key>
+            <PropertyRef Name="feedbackReasonID" />
+          </Key>
+          <Property Name="feedbackReasonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="feedbackReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblFeedbacks" Relationship="Self.FK__tblFeedba__feedb__2FCF1A8A" FromRole="tblFeedbackReasons" ToRole="tblFeedback" />
+        </EntityType>
+        <EntityType Name="tblRegistration">
+          <Key>
+            <PropertyRef Name="registrationID" />
+          </Key>
+          <Property Name="registrationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userTypeID" Type="Int32" />
+          <Property Name="countryID" Type="Int32" />
+          <Property Name="stateID" Type="Int32" />
+          <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="emailID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="profilePicture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emailConfirmed" Type="Boolean" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <Property Name="cityid" Type="Int32" />
+          <Property Name="middleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="titleId" Type="Int32" />
+          <NavigationProperty Name="tblAuthentications" Relationship="Self.FK_tblAuthentication_tblRegistration" FromRole="tblRegistration" ToRole="tblAuthentication" />
+          <NavigationProperty Name="tblCity" Relationship="Self.FK__tblRegist__cityi__2CBDA3B5" FromRole="tblRegistration" ToRole="tblCity" />
+          <NavigationProperty Name="tblCity1" Relationship="Self.FK__tblRegist__cityi__2DB1C7EE" FromRole="tblRegistration" ToRole="tblCity" />
+          <NavigationProperty Name="tblCity2" Relationship="Self.FK__tblRegist__cityi__59C55456" FromRole="tblRegistration" ToRole="tblCity" />
+          <NavigationProperty Name="tblCity3" Relationship="Self.FK__tblRegist__cityi__6166761E" FromRole="tblRegistration" ToRole="tblCity" />
+          <NavigationProperty Name="tblContactUs" Relationship="Self.FK__tblContac__regis__1699586C" FromRole="tblRegistration" ToRole="tblContactUs" />
+          <NavigationProperty Name="tblCountry" Relationship="Self.FK_tblRegistration_tblCountry" FromRole="tblRegistration" ToRole="tblCountry" />
+          <NavigationProperty Name="tblDonations" Relationship="Self.FK__tblDonati__regis__2F9A1060" FromRole="tblRegistration" ToRole="tblDonations" />
+          <NavigationProperty Name="tblEmailTemplateSaves" Relationship="Self.FK__tblEmailT__regis__0EF836A4" FromRole="tblRegistration" ToRole="tblEmailTemplateSave" />
+          <NavigationProperty Name="tblErrorlogs" Relationship="Self.FK__tblErrorl__regis__178D7CA5" FromRole="tblRegistration" ToRole="tblErrorlog" />
+          <NavigationProperty Name="tblEvents" Relationship="Self.FK_tblEvent_tblRegistration" FromRole="tblRegistration" ToRole="tblEvent" />
+          <NavigationProperty Name="tblTitle" Relationship="Self.FK__tblRegist__title__7073AF84" FromRole="tblRegistration" ToRole="tblTitle" />
+          <NavigationProperty Name="tblSubscribes" Relationship="Self.FK__tblSubscr__regis__2022C2A6" FromRole="tblRegistration" ToRole="tblSubscribe" />
+          <NavigationProperty Name="tblState" Relationship="Self.FK_tblRegistration_tblState" FromRole="tblRegistration" ToRole="tblState" />
+          <NavigationProperty Name="tblUserType" Relationship="Self.FK_tblRegistration_tblUserType" FromRole="tblRegistration" ToRole="tblUserType" />
+          <NavigationProperty Name="tblTestimonials" Relationship="Self.FK_tblTestimonial_tblRegistration" FromRole="tblRegistration" ToRole="tblTestimonial" />
+        </EntityType>
+        <EntityType Name="tblState">
+          <Key>
+            <PropertyRef Name="stateID" />
+          </Key>
+          <Property Name="stateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="countryId" Type="Int32" />
+          <Property Name="stateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblCharities" Relationship="Self.FK__tblCharit__chari__6501FCD8" FromRole="tblState" ToRole="tblCharity" />
+          <NavigationProperty Name="tblCities" Relationship="Self.FK_tblCity_tblstate" FromRole="tblState" ToRole="tblCity" />
+          <NavigationProperty Name="tblCountry" Relationship="Self.FK_tblState_tblCountry" FromRole="tblState" ToRole="tblCountry" />
+          <NavigationProperty Name="tblRegistrations" Relationship="Self.FK_tblRegistration_tblState" FromRole="tblState" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblStatu">
+          <Key>
+            <PropertyRef Name="statusID" />
+          </Key>
+          <Property Name="statusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblDonations" Relationship="Self.FK__tblDonati__Statu__10216507" FromRole="tblStatus" ToRole="tblDonations" />
+        </EntityType>
+        <EntityType Name="tblSubscribe">
+          <Key>
+            <PropertyRef Name="SubscriptionID" />
+          </Key>
+          <Property Name="SubscriptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="feedback" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="registrationid" Type="Int32" />
+          <NavigationProperty Name="tblRegistration" Relationship="Self.FK__tblSubscr__regis__2022C2A6" FromRole="tblSubscribe" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblTestimonial">
+          <Key>
+            <PropertyRef Name="TestimonialID" />
+          </Key>
+          <Property Name="TestimonialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="registrationID" Type="Int32" Nullable="false" />
+          <Property Name="Testimonial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Confirmed" Type="Boolean" />
+          <NavigationProperty Name="tblRegistration" Relationship="Self.FK_tblTestimonial_tblRegistration" FromRole="tblTestimonial" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblTitle">
+          <Key>
+            <PropertyRef Name="titleId" />
+          </Key>
+          <Property Name="titleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblRegistrations" Relationship="Self.FK__tblRegist__title__7073AF84" FromRole="tblTitle" ToRole="tblRegistration" />
+        </EntityType>
+        <EntityType Name="tblUserType">
+          <Key>
+            <PropertyRef Name="userTypeID" />
+          </Key>
+          <Property Name="userTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tblRegistrations" Relationship="Self.FK_tblRegistration_tblUserType" FromRole="tblUserType" ToRole="tblRegistration" />
+        </EntityType>
+        <Association Name="FK_tblAuthentication_tblRegistration">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblAuthentication" Type="Self.tblAuthentication" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblAuthentication">
+              <PropertyRef Name="registrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblEvent_tblCategory">
+          <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="1" />
+          <End Role="tblEvent" Type="Self.tblEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCategory">
+              <PropertyRef Name="categoryID" />
+            </Principal>
+            <Dependent Role="tblEvent">
+              <PropertyRef Name="categoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblCharit__chari__640DD89F">
+          <End Role="tblCountry" Type="Self.tblCountry" Multiplicity="1" />
+          <End Role="tblCharity" Type="Self.tblCharity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCountry">
+              <PropertyRef Name="countryID" />
+            </Principal>
+            <Dependent Role="tblCharity">
+              <PropertyRef Name="charityCountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblCharit__chari__6501FCD8">
+          <End Role="tblState" Type="Self.tblState" Multiplicity="1" />
+          <End Role="tblCharity" Type="Self.tblCharity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblState">
+              <PropertyRef Name="stateID" />
+            </Principal>
+            <Dependent Role="tblCharity">
+              <PropertyRef Name="charityStateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblCharit__chari__65F62111">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="1" />
+          <End Role="tblCharity" Type="Self.tblCharity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblCharity">
+              <PropertyRef Name="charityCityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblCharit__event__66EA454A">
+          <End Role="tblEvent" Type="Self.tblEvent" Multiplicity="1" />
+          <End Role="tblCharity" Type="Self.tblCharity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEvent">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="tblCharity">
+              <PropertyRef Name="eventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__cityi__2CBDA3B5">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="cityid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__cityi__2DB1C7EE">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="cityid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__cityi__59C55456">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="cityid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__cityi__6166761E">
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCity">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="cityid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblCity_tblstate">
+          <End Role="tblState" Type="Self.tblState" Multiplicity="0..1" />
+          <End Role="tblCity" Type="Self.tblCity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblState">
+              <PropertyRef Name="stateID" />
+            </Principal>
+            <Dependent Role="tblCity">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblContac__regis__1699586C">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblContactUs" Type="Self.tblContactU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblContactUs">
+              <PropertyRef Name="registrationid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRegistration_tblCountry">
+          <End Role="tblCountry" Type="Self.tblCountry" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCountry">
+              <PropertyRef Name="countryID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="countryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblState_tblCountry">
+          <End Role="tblCountry" Type="Self.tblCountry" Multiplicity="0..1" />
+          <End Role="tblState" Type="Self.tblState" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCountry">
+              <PropertyRef Name="countryID" />
+            </Principal>
+            <Dependent Role="tblState">
+              <PropertyRef Name="countryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblDonati__donat__24285DB4">
+          <End Role="tblDonationType" Type="Self.tblDonationType" Multiplicity="0..1" />
+          <End Role="tblDonations" Type="Self.tblDonation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDonationType">
+              <PropertyRef Name="donationTypeID" />
+            </Principal>
+            <Dependent Role="tblDonations">
+              <PropertyRef Name="donationTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblDonati__Event__0F2D40CE">
+          <End Role="tblEvent" Type="Self.tblEvent" Multiplicity="0..1" />
+          <End Role="tblDonations" Type="Self.tblDonation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEvent">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="tblDonations">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblDonati__regis__2F9A1060">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblDonations" Type="Self.tblDonation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblDonations">
+              <PropertyRef Name="registrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblDonati__Statu__10216507">
+          <End Role="tblStatus" Type="Self.tblStatu" Multiplicity="0..1" />
+          <End Role="tblDonations" Type="Self.tblDonation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStatus">
+              <PropertyRef Name="statusID" />
+            </Principal>
+            <Dependent Role="tblDonations">
+              <PropertyRef Name="statusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblEmailT__regis__0EF836A4">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="1" />
+          <End Role="tblEmailTemplateSave" Type="Self.tblEmailTemplateSave" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblEmailTemplateSave">
+              <PropertyRef Name="registrationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblErrorl__regis__178D7CA5">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblErrorlog" Type="Self.tblErrorlog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblErrorlog">
+              <PropertyRef Name="registrationid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblEvent_tblRegistration">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="1" />
+          <End Role="tblEvent" Type="Self.tblEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblEvent">
+              <PropertyRef Name="registrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblFeedba__feedb__2FCF1A8A">
+          <End Role="tblFeedbackReasons" Type="Self.tblFeedbackReason" Multiplicity="0..1" />
+          <End Role="tblFeedback" Type="Self.tblFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblFeedbackReasons">
+              <PropertyRef Name="feedbackReasonID" />
+            </Principal>
+            <Dependent Role="tblFeedback">
+              <PropertyRef Name="feedbackReasonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblRegist__title__7073AF84">
+          <End Role="tblTitle" Type="Self.tblTitle" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTitle">
+              <PropertyRef Name="titleId" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="titleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblSubscr__regis__2022C2A6">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="0..1" />
+          <End Role="tblSubscribe" Type="Self.tblSubscribe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblSubscribe">
+              <PropertyRef Name="registrationid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRegistration_tblState">
+          <End Role="tblState" Type="Self.tblState" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblState">
+              <PropertyRef Name="stateID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="stateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRegistration_tblUserType">
+          <End Role="tblUserType" Type="Self.tblUserType" Multiplicity="0..1" />
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUserType">
+              <PropertyRef Name="userTypeID" />
+            </Principal>
+            <Dependent Role="tblRegistration">
+              <PropertyRef Name="userTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTestimonial_tblRegistration">
+          <End Role="tblRegistration" Type="Self.tblRegistration" Multiplicity="1" />
+          <End Role="tblTestimonial" Type="Self.tblTestimonial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRegistration">
+              <PropertyRef Name="registrationID" />
+            </Principal>
+            <Dependent Role="tblTestimonial">
+              <PropertyRef Name="registrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DonateNeedyNewEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAuthentications" EntityType="Self.tblAuthentication" />
+          <EntitySet Name="tblCategories" EntityType="Self.tblCategory" />
+          <EntitySet Name="tblCharities" EntityType="Self.tblCharity" />
+          <EntitySet Name="tblCities" EntityType="Self.tblCity" />
+          <EntitySet Name="tblContactUs" EntityType="Self.tblContactU" />
+          <EntitySet Name="tblCountries" EntityType="Self.tblCountry" />
+          <EntitySet Name="tblDonations" EntityType="Self.tblDonation" />
+          <EntitySet Name="tblDonationTypes" EntityType="Self.tblDonationType" />
+          <EntitySet Name="tblEmailTemplateSaves" EntityType="Self.tblEmailTemplateSave" />
+          <EntitySet Name="tblErrorlogs" EntityType="Self.tblErrorlog" />
+          <EntitySet Name="tblEvents" EntityType="Self.tblEvent" />
+          <EntitySet Name="tblFeedbacks" EntityType="Self.tblFeedback" />
+          <EntitySet Name="tblFeedbackReasons" EntityType="Self.tblFeedbackReason" />
+          <EntitySet Name="tblRegistrations" EntityType="Self.tblRegistration" />
+          <EntitySet Name="tblStates" EntityType="Self.tblState" />
+          <EntitySet Name="tblStatus" EntityType="Self.tblStatu" />
+          <EntitySet Name="tblSubscribes" EntityType="Self.tblSubscribe" />
+          <EntitySet Name="tblTestimonials" EntityType="Self.tblTestimonial" />
+          <EntitySet Name="tblTitles" EntityType="Self.tblTitle" />
+          <EntitySet Name="tblUserTypes" EntityType="Self.tblUserType" />
+          <AssociationSet Name="FK_tblAuthentication_tblRegistration" Association="Self.FK_tblAuthentication_tblRegistration">
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+            <End Role="tblAuthentication" EntitySet="tblAuthentications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblEvent_tblCategory" Association="Self.FK_tblEvent_tblCategory">
+            <End Role="tblCategory" EntitySet="tblCategories" />
+            <End Role="tblEvent" EntitySet="tblEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblCharit__chari__640DD89F" Association="Self.FK__tblCharit__chari__640DD89F">
+            <End Role="tblCountry" EntitySet="tblCountries" />
+            <End Role="tblCharity" EntitySet="tblCharities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblCharit__chari__6501FCD8" Association="Self.FK__tblCharit__chari__6501FCD8">
+            <End Role="tblState" EntitySet="tblStates" />
+            <End Role="tblCharity" EntitySet="tblCharities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblCharit__chari__65F62111" Association="Self.FK__tblCharit__chari__65F62111">
+            <End Role="tblCity" EntitySet="tblCities" />
+            <End Role="tblCharity" EntitySet="tblCharities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblCharit__event__66EA454A" Association="Self.FK__tblCharit__event__66EA454A">
+            <End Role="tblEvent" EntitySet="tblEvents" />
+            <End Role="tblCharity" EntitySet="tblCharities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__cityi__2CBDA3B5" Association="Self.FK__tblRegist__cityi__2CBDA3B5">
+            <End Role="tblCity" EntitySet="tblCities" />
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__cityi__2DB1C7EE" Association="Self.FK__tblRegist__cityi__2DB1C7EE">
+            <End Role="tblCity" EntitySet="tblCities" />
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__cityi__59C55456" Association="Self.FK__tblRegist__cityi__59C55456">
+            <End Role="tblCity" EntitySet="tblCities" />
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__cityi__6166761E" Association="Self.FK__tblRegist__cityi__6166761E">
+            <End Role="tblCity" EntitySet="tblCities" />
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblCity_tblstate" Association="Self.FK_tblCity_tblstate">
+            <End Role="tblState" EntitySet="tblStates" />
+            <End Role="tblCity" EntitySet="tblCities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblContac__regis__1699586C" Association="Self.FK__tblContac__regis__1699586C">
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+            <End Role="tblContactUs" EntitySet="tblContactUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRegistration_tblCountry" Association="Self.FK_tblRegistration_tblCountry">
+            <End Role="tblCountry" EntitySet="tblCountries" />
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblState_tblCountry" Association="Self.FK_tblState_tblCountry">
+            <End Role="tblCountry" EntitySet="tblCountries" />
+            <End Role="tblState" EntitySet="tblStates" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblDonati__donat__24285DB4" Association="Self.FK__tblDonati__donat__24285DB4">
+            <End Role="tblDonationType" EntitySet="tblDonationTypes" />
+            <End Role="tblDonations" EntitySet="tblDonations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblDonati__Event__0F2D40CE" Association="Self.FK__tblDonati__Event__0F2D40CE">
+            <End Role="tblEvent" EntitySet="tblEvents" />
+            <End Role="tblDonations" EntitySet="tblDonations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblDonati__regis__2F9A1060" Association="Self.FK__tblDonati__regis__2F9A1060">
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+            <End Role="tblDonations" EntitySet="tblDonations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblDonati__Statu__10216507" Association="Self.FK__tblDonati__Statu__10216507">
+            <End Role="tblStatus" EntitySet="tblStatus" />
+            <End Role="tblDonations" EntitySet="tblDonations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblEmailT__regis__0EF836A4" Association="Self.FK__tblEmailT__regis__0EF836A4">
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+            <End Role="tblEmailTemplateSave" EntitySet="tblEmailTemplateSaves" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblErrorl__regis__178D7CA5" Association="Self.FK__tblErrorl__regis__178D7CA5">
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+            <End Role="tblErrorlog" EntitySet="tblErrorlogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblEvent_tblRegistration" Association="Self.FK_tblEvent_tblRegistration">
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+            <End Role="tblEvent" EntitySet="tblEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblFeedba__feedb__2FCF1A8A" Association="Self.FK__tblFeedba__feedb__2FCF1A8A">
+            <End Role="tblFeedbackReasons" EntitySet="tblFeedbackReasons" />
+            <End Role="tblFeedback" EntitySet="tblFeedbacks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblRegist__title__7073AF84" Association="Self.FK__tblRegist__title__7073AF84">
+            <End Role="tblTitle" EntitySet="tblTitles" />
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblSubscr__regis__2022C2A6" Association="Self.FK__tblSubscr__regis__2022C2A6">
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+            <End Role="tblSubscribe" EntitySet="tblSubscribes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRegistration_tblState" Association="Self.FK_tblRegistration_tblState">
+            <End Role="tblState" EntitySet="tblStates" />
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRegistration_tblUserType" Association="Self.FK_tblRegistration_tblUserType">
+            <End Role="tblUserType" EntitySet="tblUserTypes" />
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTestimonial_tblRegistration" Association="Self.FK_tblTestimonial_tblRegistration">
+            <End Role="tblRegistration" EntitySet="tblRegistrations" />
+            <End Role="tblTestimonial" EntitySet="tblTestimonials" />
+          </AssociationSet>
+          <FunctionImport Name="usp_ChangePassword" ReturnType="Collection(DonateNeedyNewModel.usp_ChangePassword_Result)">
+            <Parameter Name="username" Mode="In" Type="String" />
+            <Parameter Name="OldPassword" Mode="In" Type="String" />
+            <Parameter Name="NewPassword" Mode="In" Type="String" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CheckCredentials" ReturnType="Collection(Int32)">
+            <Parameter Name="emailID" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="outputCount" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_checkFundRaisedCompletedOrNot">
+            <Parameter Name="FundRaisingID" Mode="In" Type="Int32" />
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CRUDCloseSwitch">
+            <Parameter Name="eventID" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CRUDtblContactUs" ReturnType="Collection(DonateNeedyNewModel.usp_CRUDtblContactUs_Result)">
+            <Parameter Name="contactUsID" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="emailID" Mode="In" Type="String" />
+            <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+            <Parameter Name="message" Mode="In" Type="String" />
+            <Parameter Name="registrationid" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CRUDtblEvent" ReturnType="Collection(DonateNeedyNewModel.usp_CRUDtblEvent_Result)">
+            <Parameter Name="eventID" Mode="In" Type="Int32" />
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="categoryID" Mode="In" Type="Int32" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="image" Mode="In" Type="String" />
+            <Parameter Name="startDate" Mode="In" Type="DateTime" />
+            <Parameter Name="endDate" Mode="In" Type="DateTime" />
+            <Parameter Name="countryID" Mode="In" Type="Int32" />
+            <Parameter Name="stateID" Mode="In" Type="Int32" />
+            <Parameter Name="cityid" Mode="In" Type="Int32" />
+            <Parameter Name="venue" Mode="In" Type="String" />
+            <Parameter Name="confirmed" Mode="In" Type="Boolean" />
+            <Parameter Name="targetAmount" Mode="In" Type="String" />
+            <Parameter Name="collectedAmount" Mode="In" Type="String" />
+            <Parameter Name="reasonForRejecting" Mode="In" Type="String" />
+            <Parameter Name="approval" Mode="In" Type="Boolean" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CRUDtblEventNew" ReturnType="Collection(DonateNeedyNewModel.usp_CRUDtblEventNew_Result)">
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+            <Parameter Name="Title" Mode="In" Type="String" />
+            <Parameter Name="categoryID" Mode="In" Type="Int32" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="image" Mode="In" Type="String" />
+            <Parameter Name="startDate" Mode="In" Type="DateTime" />
+            <Parameter Name="endDate" Mode="In" Type="DateTime" />
+            <Parameter Name="venue" Mode="In" Type="String" />
+            <Parameter Name="confirmed" Mode="In" Type="Boolean" />
+            <Parameter Name="targetAmount" Mode="In" Type="String" />
+            <Parameter Name="collectedAmount" Mode="In" Type="String" />
+            <Parameter Name="reasonForRejecting" Mode="In" Type="String" />
+            <Parameter Name="approval" Mode="In" Type="Boolean" />
+            <Parameter Name="video" Mode="In" Type="String" />
+            <Parameter Name="benificiaryType" Mode="In" Type="String" />
+            <Parameter Name="organiserName" Mode="In" Type="String" />
+            <Parameter Name="EventID" Mode="In" Type="Int32" />
+            <Parameter Name="charityName" Mode="In" Type="String" />
+            <Parameter Name="charityIdentificationNumber" Mode="In" Type="String" />
+            <Parameter Name="charityPersonOfContact" Mode="In" Type="String" />
+            <Parameter Name="charityPhoneNumber" Mode="In" Type="String" />
+            <Parameter Name="charityEmailId" Mode="In" Type="String" />
+            <Parameter Name="charityCountryID" Mode="In" Type="Int32" />
+            <Parameter Name="charityStateID" Mode="In" Type="Int32" />
+            <Parameter Name="charityCityid" Mode="In" Type="Int32" />
+            <Parameter Name="charityAddress" Mode="In" Type="String" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CRUDtblRegistation" ReturnType="Collection(DonateNeedyNewModel.usp_CRUDtblRegistation_Result)">
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+            <Parameter Name="userTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="countryID" Mode="In" Type="Int32" />
+            <Parameter Name="stateID" Mode="In" Type="Int32" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+            <Parameter Name="emailID" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="Address" Mode="In" Type="String" />
+            <Parameter Name="Cityid" Mode="In" Type="Int32" />
+            <Parameter Name="Pincode" Mode="In" Type="String" />
+            <Parameter Name="profilePicture" Mode="In" Type="String" />
+            <Parameter Name="emailConfirmed" Mode="In" Type="Boolean" />
+            <Parameter Name="phoneNumber" Mode="In" Type="String" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="middlename" Mode="In" Type="String" />
+            <Parameter Name="titleid" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CRUDUserImgSave" ReturnType="Collection(DonateNeedyNewModel.usp_CRUDUserImgSave_Result)">
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+            <Parameter Name="profilePicture" Mode="In" Type="String" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CURDUserProfile">
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+            <Parameter Name="userTypeID" Mode="In" Type="Int32" />
+            <Parameter Name="countryID" Mode="In" Type="Int32" />
+            <Parameter Name="stateID" Mode="In" Type="Int32" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="emailID" Mode="In" Type="String" />
+            <Parameter Name="Address" Mode="In" Type="String" />
+            <Parameter Name="City" Mode="In" Type="String" />
+            <Parameter Name="Pincode" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_emergency" ReturnType="Collection(DonateNeedyNewModel.usp_emergency_Result)">
+            <Parameter Name="categoryID" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getApprovalCount" ReturnType="Collection(DonateNeedyNewModel.usp_getApprovalCount_Result)">
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getApprovalData" ReturnType="Collection(DonateNeedyNewModel.usp_getApprovalData_Result)">
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getCategory" ReturnType="Collection(DonateNeedyNewModel.usp_getCategory_Result)" />
+          <FunctionImport Name="usp_getCountryNames" ReturnType="Collection(DonateNeedyNewModel.usp_getCountryNames_Result)" />
+          <FunctionImport Name="usp_GetEmailConfirm" ReturnType="Collection(DonateNeedyNewModel.usp_GetEmailConfirm_Result)">
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getEventsData" ReturnType="Collection(DonateNeedyNewModel.usp_getEventsData_Result)">
+            <Parameter Name="EventID" Mode="In" Type="Int32" />
+            <Parameter Name="categoryID" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getFilterEvents" ReturnType="Collection(DonateNeedyNewModel.usp_getFilterEvents_Result)">
+            <Parameter Name="categoryID" Mode="In" Type="Int32" />
+            <Parameter Name="mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getFundraisingdata">
+            <Parameter Name="FundRaisingID" Mode="In" Type="Int32" />
+            <Parameter Name="categoryID" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getFundraisingEventsData">
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getHappyPeopleCount" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="usp_GetRecordsByEventIDOrFundraiserName" ReturnType="Collection(DonateNeedyNewModel.usp_GetRecordsByEventIDOrFundraiserName_Result)">
+            <Parameter Name="EventID" Mode="In" Type="Int32" />
+            <Parameter Name="OrganiserName" Mode="In" Type="String" />
+            <Parameter Name="categoryID" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getTestimonialdata" ReturnType="Collection(DonateNeedyNewModel.usp_getTestimonialdata_Result)" />
+          <FunctionImport Name="usp_getTitleNames" ReturnType="Collection(DonateNeedyNewModel.usp_getTitleNames_Result)" />
+          <FunctionImport Name="usp_getUserDetails" ReturnType="Collection(DonateNeedyNewModel.usp_getUserDetails_Result)">
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_getUsersData">
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_insertFeedback" ReturnType="Collection(DonateNeedyNewModel.usp_insertFeedback_Result)">
+            <Parameter Name="feedbackID" Mode="In" Type="Int32" />
+            <Parameter Name="feedbackReasonID" Mode="In" Type="Int32" />
+            <Parameter Name="userFeedback" Mode="In" Type="String" />
+            <Parameter Name="Rating" Mode="In" Type="Int32" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InserttblTestimonial" ReturnType="Collection(DonateNeedyNewModel.usp_InserttblTestimonial_Result)">
+            <Parameter Name="TestimonialID" Mode="In" Type="Int32" />
+            <Parameter Name="registrationID" Mode="In" Type="Int32" />
+            <Parameter Name="Testimonial" Mode="In" Type="String" />
+            <Parameter Name="Mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_RandomPassword" ReturnType="Collection(String)">
+            <Parameter Name="emailID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_tblEmailTemplateSave" ReturnType="Collection(DonateNeedyNewModel.usp_tblEmailTemplateSave_Result)">
+            <Parameter Name="registrationId" Mode="In" Type="Int32" />
+            <Parameter Name="templateName" Mode="In" Type="String" />
+            <Parameter Name="templateSubject" Mode="In" Type="String" />
+            <Parameter Name="templateBody" Mode="In" Type="String" />
+            <Parameter Name="mode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_tblSubscribe">
+            <Parameter Name="registrationId" Mode="In" Type="Int32" />
+            <Parameter Name="feedback" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ValidateMemberWithPassword" ReturnType="Collection(Int32)">
+            <Parameter Name="emailID" Mode="In" Type="String" />
+            <Parameter Name="PassWord" Mode="In" Type="String" />
+            <Parameter Name="outputCount" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="usp_ChangePassword_Result">
+          <Property Type="Int32" Name="registrationID" Nullable="true" />
+          <Property Type="Int32" Name="authenticationID" Nullable="false" />
+          <Property Type="String" Name="userName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_CRUDtblContactUs_Result">
+          <Property Type="Int32" Name="ContactUsID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmailID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Message" Nullable="true" />
+          <Property Type="Int32" Name="registrationid" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_CRUDtblEvent_Result">
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="Int32" Name="registrationID" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="categoryID" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="String" Name="Image" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Venue" Nullable="true" />
+          <Property Type="Boolean" Name="confirmed" Nullable="true" />
+          <Property Type="String" Name="targetAmount" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="updateddate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="collectedAmount" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="reasonForRejecting" Nullable="true" />
+          <Property Type="Boolean" Name="Approval" Nullable="true" />
+          <Property Type="String" Name="organiserName" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="usp_CRUDtblEventNew_Result">
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="Int32" Name="registrationID" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="categoryID" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="String" Name="Image" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Venue" Nullable="true" />
+          <Property Type="Boolean" Name="confirmed" Nullable="true" />
+          <Property Type="String" Name="targetAmount" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="updateddate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="collectedAmount" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="reasonForRejecting" Nullable="true" />
+          <Property Type="Boolean" Name="Approval" Nullable="true" />
+          <Property Type="String" Name="organiserName" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="usp_CRUDtblRegistation_Result">
+          <Property Type="Int32" Name="registrationID" Nullable="false" />
+          <Property Type="Int32" Name="userTypeID" Nullable="true" />
+          <Property Type="Int32" Name="countryid" Nullable="false" />
+          <Property Type="String" Name="countryName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="stateid" Nullable="false" />
+          <Property Type="String" Name="stateName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="firstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="lastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="emailID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="userName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="cityid" Nullable="false" />
+          <Property Type="String" Name="cityname" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Pincode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Address" Nullable="true" />
+          <Property Type="String" Name="profilePicture" Nullable="true" />
+          <Property Type="Boolean" Name="emailConfirmed" Nullable="true" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="middlename" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="titleid" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_CRUDUserImgSave_Result">
+          <Property Type="Int32" Name="registrationID" Nullable="false" />
+          <Property Type="String" Name="profilePicture" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_emergency_Result">
+          <Property Type="String" Name="targetAmount" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="collectedAmount" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="categoryID" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Image" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Video" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Venue" Nullable="true" />
+          <Property Type="DateTime" Name="enddate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="usp_getApprovalCount_Result">
+          <Property Type="Int32" Name="Approved" Nullable="true" />
+          <Property Type="Int32" Name="NotApproved" Nullable="true" />
+          <Property Type="Int32" Name="ApprovalPending" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_getApprovalData_Result">
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="String" Name="image" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="confirmed" Nullable="true" />
+          <Property Type="Int32" Name="categoryid" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="targetAmount" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="usp_getCategory_Result">
+          <Property Type="Int32" Name="categoryID" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_getCountryNames_Result">
+          <Property Type="Int32" Name="countryID" Nullable="false" />
+          <Property Type="String" Name="countryName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_GetEmailConfirm_Result">
+          <Property Type="Int32" Name="registrationID" Nullable="false" />
+          <Property Type="Boolean" Name="EmailConfirmed" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_getEventsData_Result">
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="String" Name="OrganiserName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="registrationID" Nullable="false" />
+          <Property Type="String" Name="firstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="Int32" Name="categoryid" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Image" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Venue" Nullable="true" />
+          <Property Type="String" Name="targetAmount" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="collectedAmount" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="confirmed" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_getFilterEvents_Result">
+          <Property Type="String" Name="targetAmount" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="collectedAmount" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="categoryID" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Image" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Video" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Venue" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_GetRecordsByEventIDOrFundraiserName_Result">
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="String" Name="OrganiserName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="firstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="Int32" Name="categoryid" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Image" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Venue" Nullable="true" />
+          <Property Type="String" Name="targetAmount" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="collectedAmount" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="usp_getTestimonialdata_Result">
+          <Property Type="String" Name="testimonial" Nullable="true" />
+          <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="firstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="profilePicture" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_getTitleNames_Result">
+          <Property Type="Int32" Name="titleid" Nullable="false" />
+          <Property Type="String" Name="title" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_getUserDetails_Result">
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="String" Name="image" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+          <Property Type="Boolean" Name="confirmed" Nullable="true" />
+          <Property Type="Int32" Name="categoryid" Nullable="false" />
+          <Property Type="String" Name="categoryName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="targetAmount" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_insertFeedback_Result">
+          <Property Type="Int32" Name="feedbackID" Nullable="false" />
+          <Property Type="String" Name="feedbackReason" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="userFeedback" Nullable="true" />
+          <Property Type="Int32" Name="Rating" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_InserttblTestimonial_Result">
+          <Property Type="Int32" Name="TestimonialID" Nullable="false" />
+          <Property Type="Int32" Name="registrationID" Nullable="false" />
+          <Property Type="String" Name="Testimonial" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_tblEmailTemplateSave_Result">
+          <Property Type="Int32" Name="emailTemplateId" Nullable="false" />
+          <Property Type="Int32" Name="registrationId" Nullable="false" />
+          <Property Type="String" Name="templateName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="templateSubject" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="templateBody" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DonateNeedyNewModelStoreContainer" CdmEntityContainer="DonateNeedyNewEntities">
+          <EntitySetMapping Name="tblAuthentications">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblAuthentication">
+              <MappingFragment StoreEntitySet="tblAuthentication">
+                <ScalarProperty Name="authenticationID" ColumnName="authenticationID" />
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCategories">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblCategory">
+              <MappingFragment StoreEntitySet="tblCategory">
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCharities">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblCharity">
+              <MappingFragment StoreEntitySet="tblCharity">
+                <ScalarProperty Name="charityTypeId" ColumnName="charityTypeId" />
+                <ScalarProperty Name="eventId" ColumnName="eventId" />
+                <ScalarProperty Name="charityName" ColumnName="charityName" />
+                <ScalarProperty Name="charityIdentificationNumber" ColumnName="charityIdentificationNumber" />
+                <ScalarProperty Name="charityPersonOfContact" ColumnName="charityPersonOfContact" />
+                <ScalarProperty Name="charityPhoneNumber" ColumnName="charityPhoneNumber" />
+                <ScalarProperty Name="charityEmailId" ColumnName="charityEmailId" />
+                <ScalarProperty Name="charityCountryId" ColumnName="charityCountryId" />
+                <ScalarProperty Name="charityStateId" ColumnName="charityStateId" />
+                <ScalarProperty Name="charityCityId" ColumnName="charityCityId" />
+                <ScalarProperty Name="charityAddress" ColumnName="charityAddress" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCities">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblCity">
+              <MappingFragment StoreEntitySet="tblCity">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblContactUs">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblContactU">
+              <MappingFragment StoreEntitySet="tblContactUs">
+                <ScalarProperty Name="ContactUsID" ColumnName="ContactUsID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCountries">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblCountry">
+              <MappingFragment StoreEntitySet="tblCountry">
+                <ScalarProperty Name="countryID" ColumnName="countryID" />
+                <ScalarProperty Name="countryName" ColumnName="countryName" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDonations">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblDonation">
+              <MappingFragment StoreEntitySet="tblDonations">
+                <ScalarProperty Name="donationID" ColumnName="donationID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="statusID" ColumnName="statusID" />
+                <ScalarProperty Name="donationAmount" ColumnName="donationAmount" />
+                <ScalarProperty Name="emailID" ColumnName="emailID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="transactionChargeS" ColumnName="transactionChargeS" />
+                <ScalarProperty Name="receivedAmount" ColumnName="receivedAmount" />
+                <ScalarProperty Name="transactionID" ColumnName="transactionID" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="donationTypeID" ColumnName="donationTypeID" />
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="emailnotification" ColumnName="emailnotification" />
+                <ScalarProperty Name="anonymusdonor" ColumnName="anonymusdonor" />
+                <ScalarProperty Name="anonymusname" ColumnName="anonymusname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDonationTypes">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblDonationType">
+              <MappingFragment StoreEntitySet="tblDonationType">
+                <ScalarProperty Name="donationTypeID" ColumnName="donationTypeID" />
+                <ScalarProperty Name="donationType" ColumnName="donationType" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEmailTemplateSaves">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblEmailTemplateSave">
+              <MappingFragment StoreEntitySet="tblEmailTemplateSave">
+                <ScalarProperty Name="emailTemplateId" ColumnName="emailTemplateId" />
+                <ScalarProperty Name="registrationId" ColumnName="registrationId" />
+                <ScalarProperty Name="templateName" ColumnName="templateName" />
+                <ScalarProperty Name="templateSubject" ColumnName="templateSubject" />
+                <ScalarProperty Name="templateBody" ColumnName="templateBody" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblErrorlogs">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblErrorlog">
+              <MappingFragment StoreEntitySet="tblErrorlog">
+                <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+                <ScalarProperty Name="ErrorType" ColumnName="ErrorType" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="ErrorPage" ColumnName="ErrorPage" />
+                <ScalarProperty Name="OccuredDate" ColumnName="OccuredDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEvents">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblEvent">
+              <MappingFragment StoreEntitySet="tblEvent">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="reasonForRejecting" ColumnName="reasonForRejecting" />
+                <ScalarProperty Name="Approval" ColumnName="Approval" />
+                <ScalarProperty Name="Video" ColumnName="Video" />
+                <ScalarProperty Name="BenificiaryType" ColumnName="BenificiaryType" />
+                <ScalarProperty Name="OrganiserName" ColumnName="OrganiserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFeedbacks">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblFeedback">
+              <MappingFragment StoreEntitySet="tblFeedback">
+                <ScalarProperty Name="feedbackID" ColumnName="feedbackID" />
+                <ScalarProperty Name="feedbackReasonID" ColumnName="feedbackReasonID" />
+                <ScalarProperty Name="userFeedback" ColumnName="userFeedback" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFeedbackReasons">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblFeedbackReason">
+              <MappingFragment StoreEntitySet="tblFeedbackReasons">
+                <ScalarProperty Name="feedbackReasonID" ColumnName="feedbackReasonID" />
+                <ScalarProperty Name="feedbackReason" ColumnName="feedbackReason" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRegistrations">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblRegistration">
+              <MappingFragment StoreEntitySet="tblRegistration">
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
+                <ScalarProperty Name="countryID" ColumnName="countryID" />
+                <ScalarProperty Name="stateID" ColumnName="stateID" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="emailID" ColumnName="emailID" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+                <ScalarProperty Name="emailConfirmed" ColumnName="emailConfirmed" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+                <ScalarProperty Name="middleName" ColumnName="middleName" />
+                <ScalarProperty Name="titleId" ColumnName="titleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStates">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblState">
+              <MappingFragment StoreEntitySet="tblState">
+                <ScalarProperty Name="stateID" ColumnName="stateID" />
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+                <ScalarProperty Name="stateName" ColumnName="stateName" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStatus">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblStatu">
+              <MappingFragment StoreEntitySet="tblStatus">
+                <ScalarProperty Name="statusID" ColumnName="statusID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSubscribes">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblSubscribe">
+              <MappingFragment StoreEntitySet="tblSubscribe">
+                <ScalarProperty Name="SubscriptionID" ColumnName="SubscriptionID" />
+                <ScalarProperty Name="feedback" ColumnName="feedback" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTestimonials">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblTestimonial">
+              <MappingFragment StoreEntitySet="tblTestimonial">
+                <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="Testimonial" ColumnName="Testimonial" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="Confirmed" ColumnName="Confirmed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTitles">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblTitle">
+              <MappingFragment StoreEntitySet="tblTitle">
+                <ScalarProperty Name="titleId" ColumnName="titleId" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserTypes">
+            <EntityTypeMapping TypeName="DonateNeedyNewModel.tblUserType">
+              <MappingFragment StoreEntitySet="tblUserType">
+                <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
+                <ScalarProperty Name="userType" ColumnName="userType" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+                <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_ChangePassword" FunctionName="DonateNeedyNewModel.Store.usp_ChangePassword">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_ChangePassword_Result">
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="authenticationID" ColumnName="authenticationID" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_CheckCredentials" FunctionName="DonateNeedyNewModel.Store.usp_CheckCredentials" />
+          <FunctionImportMapping FunctionImportName="usp_checkFundRaisedCompletedOrNot" FunctionName="DonateNeedyNewModel.Store.usp_checkFundRaisedCompletedOrNot" />
+          <FunctionImportMapping FunctionImportName="usp_CRUDCloseSwitch" FunctionName="DonateNeedyNewModel.Store.usp_CRUDCloseSwitch" />
+          <FunctionImportMapping FunctionImportName="usp_CRUDtblContactUs" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblContactUs">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblContactUs_Result">
+                <ScalarProperty Name="ContactUsID" ColumnName="ContactUsID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_CRUDtblEvent" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblEvent">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblEvent_Result">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+                <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="updateddate" ColumnName="updateddate" />
+                <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+                <ScalarProperty Name="reasonForRejecting" ColumnName="reasonForRejecting" />
+                <ScalarProperty Name="Approval" ColumnName="Approval" />
+                <ScalarProperty Name="organiserName" ColumnName="organiserName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_CRUDtblEventNew" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblEventNew">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblEventNew_Result">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+                <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="updateddate" ColumnName="updateddate" />
+                <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+                <ScalarProperty Name="reasonForRejecting" ColumnName="reasonForRejecting" />
+                <ScalarProperty Name="Approval" ColumnName="Approval" />
+                <ScalarProperty Name="organiserName" ColumnName="organiserName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_CRUDtblRegistation" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblRegistation">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblRegistation_Result">
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+                <ScalarProperty Name="countryName" ColumnName="countryName" />
+                <ScalarProperty Name="stateid" ColumnName="stateid" />
+                <ScalarProperty Name="stateName" ColumnName="stateName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="emailID" ColumnName="emailID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+                <ScalarProperty Name="cityname" ColumnName="cityname" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+                <ScalarProperty Name="emailConfirmed" ColumnName="emailConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="middlename" ColumnName="middlename" />
+                <ScalarProperty Name="titleid" ColumnName="titleid" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_CRUDUserImgSave" FunctionName="DonateNeedyNewModel.Store.usp_CRUDUserImgSave">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDUserImgSave_Result">
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_CURDUserProfile" FunctionName="DonateNeedyNewModel.Store.usp_CURDUserProfile" />
+          <FunctionImportMapping FunctionImportName="usp_emergency" FunctionName="DonateNeedyNewModel.Store.usp_emergency">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_emergency_Result">
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Video" ColumnName="Video" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+                <ScalarProperty Name="enddate" ColumnName="enddate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getApprovalCount" FunctionName="DonateNeedyNewModel.Store.usp_getApprovalCount">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getApprovalCount_Result">
+                <ScalarProperty Name="Approved" ColumnName="Approved" />
+                <ScalarProperty Name="NotApproved" ColumnName="NotApproved" />
+                <ScalarProperty Name="ApprovalPending" ColumnName="ApprovalPending" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getApprovalData" FunctionName="DonateNeedyNewModel.Store.usp_getApprovalData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getApprovalData_Result">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+                <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getCategory" FunctionName="DonateNeedyNewModel.Store.usp_getCategory">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getCategory_Result">
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getCountryNames" FunctionName="DonateNeedyNewModel.Store.usp_getCountryNames">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getCountryNames_Result">
+                <ScalarProperty Name="countryID" ColumnName="countryID" />
+                <ScalarProperty Name="countryName" ColumnName="countryName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetEmailConfirm" FunctionName="DonateNeedyNewModel.Store.usp_GetEmailConfirm">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_GetEmailConfirm_Result">
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getEventsData" FunctionName="DonateNeedyNewModel.Store.usp_getEventsData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getEventsData_Result">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="OrganiserName" ColumnName="OrganiserName" />
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+                <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getFilterEvents" FunctionName="DonateNeedyNewModel.Store.usp_getFilterEvents">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getFilterEvents_Result">
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Video" ColumnName="Video" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getFundraisingdata" FunctionName="DonateNeedyNewModel.Store.usp_getFundraisingdata" />
+          <FunctionImportMapping FunctionImportName="usp_getFundraisingEventsData" FunctionName="DonateNeedyNewModel.Store.usp_getFundraisingEventsData" />
+          <FunctionImportMapping FunctionImportName="usp_getHappyPeopleCount" FunctionName="DonateNeedyNewModel.Store.usp_getHappyPeopleCount" />
+          <FunctionImportMapping FunctionImportName="usp_GetRecordsByEventIDOrFundraiserName" FunctionName="DonateNeedyNewModel.Store.usp_GetRecordsByEventIDOrFundraiserName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_GetRecordsByEventIDOrFundraiserName_Result">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="OrganiserName" ColumnName="OrganiserName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getTestimonialdata" FunctionName="DonateNeedyNewModel.Store.usp_getTestimonialdata">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getTestimonialdata_Result">
+                <ScalarProperty Name="testimonial" ColumnName="testimonial" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getTitleNames" FunctionName="DonateNeedyNewModel.Store.usp_getTitleNames">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getTitleNames_Result">
+                <ScalarProperty Name="titleid" ColumnName="titleid" />
+                <ScalarProperty Name="title" ColumnName="title" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getUserDetails" FunctionName="DonateNeedyNewModel.Store.usp_getUserDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getUserDetails_Result">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+                <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_getUsersData" FunctionName="DonateNeedyNewModel.Store.usp_getUsersData" />
+          <FunctionImportMapping FunctionImportName="usp_insertFeedback" FunctionName="DonateNeedyNewModel.Store.usp_insertFeedback">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_insertFeedback_Result">
+                <ScalarProperty Name="feedbackID" ColumnName="feedbackID" />
+                <ScalarProperty Name="feedbackReason" ColumnName="feedbackReason" />
+                <ScalarProperty Name="userFeedback" ColumnName="userFeedback" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_InserttblTestimonial" FunctionName="DonateNeedyNewModel.Store.usp_InserttblTestimonial">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_InserttblTestimonial_Result">
+                <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+                <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+                <ScalarProperty Name="Testimonial" ColumnName="Testimonial" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_RandomPassword" FunctionName="DonateNeedyNewModel.Store.usp_RandomPassword" />
+          <FunctionImportMapping FunctionImportName="usp_tblEmailTemplateSave" FunctionName="DonateNeedyNewModel.Store.usp_tblEmailTemplateSave">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_tblEmailTemplateSave_Result">
+                <ScalarProperty Name="emailTemplateId" ColumnName="emailTemplateId" />
+                <ScalarProperty Name="registrationId" ColumnName="registrationId" />
+                <ScalarProperty Name="templateName" ColumnName="templateName" />
+                <ScalarProperty Name="templateSubject" ColumnName="templateSubject" />
+                <ScalarProperty Name="templateBody" ColumnName="templateBody" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_tblSubscribe" FunctionName="DonateNeedyNewModel.Store.usp_tblSubscribe" />
+          <FunctionImportMapping FunctionImportName="usp_ValidateMemberWithPassword" FunctionName="DonateNeedyNewModel.Store.usp_ValidateMemberWithPassword" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

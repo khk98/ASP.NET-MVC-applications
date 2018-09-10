@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DonateNeedyNewModelStoreContainer" CdmEntityContainer="DonateNeedyNewEntities">
+    <EntitySetMapping Name="tblAuthentications">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblAuthentication">
+        <MappingFragment StoreEntitySet="tblAuthentication">
+          <ScalarProperty Name="authenticationID" ColumnName="authenticationID" />
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCategories">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblCategory">
+        <MappingFragment StoreEntitySet="tblCategory">
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCharities">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblCharity">
+        <MappingFragment StoreEntitySet="tblCharity">
+          <ScalarProperty Name="charityTypeId" ColumnName="charityTypeId" />
+          <ScalarProperty Name="eventId" ColumnName="eventId" />
+          <ScalarProperty Name="charityName" ColumnName="charityName" />
+          <ScalarProperty Name="charityIdentificationNumber" ColumnName="charityIdentificationNumber" />
+          <ScalarProperty Name="charityPersonOfContact" ColumnName="charityPersonOfContact" />
+          <ScalarProperty Name="charityPhoneNumber" ColumnName="charityPhoneNumber" />
+          <ScalarProperty Name="charityEmailId" ColumnName="charityEmailId" />
+          <ScalarProperty Name="charityCountryId" ColumnName="charityCountryId" />
+          <ScalarProperty Name="charityStateId" ColumnName="charityStateId" />
+          <ScalarProperty Name="charityCityId" ColumnName="charityCityId" />
+          <ScalarProperty Name="charityAddress" ColumnName="charityAddress" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCities">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblCity">
+        <MappingFragment StoreEntitySet="tblCity">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContactUs">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblContactU">
+        <MappingFragment StoreEntitySet="tblContactUs">
+          <ScalarProperty Name="ContactUsID" ColumnName="ContactUsID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCountries">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblCountry">
+        <MappingFragment StoreEntitySet="tblCountry">
+          <ScalarProperty Name="countryID" ColumnName="countryID" />
+          <ScalarProperty Name="countryName" ColumnName="countryName" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDonations">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblDonation">
+        <MappingFragment StoreEntitySet="tblDonations">
+          <ScalarProperty Name="donationID" ColumnName="donationID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="statusID" ColumnName="statusID" />
+          <ScalarProperty Name="donationAmount" ColumnName="donationAmount" />
+          <ScalarProperty Name="emailID" ColumnName="emailID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="transactionChargeS" ColumnName="transactionChargeS" />
+          <ScalarProperty Name="receivedAmount" ColumnName="receivedAmount" />
+          <ScalarProperty Name="transactionID" ColumnName="transactionID" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="donationTypeID" ColumnName="donationTypeID" />
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="emailnotification" ColumnName="emailnotification" />
+          <ScalarProperty Name="anonymusdonor" ColumnName="anonymusdonor" />
+          <ScalarProperty Name="anonymusname" ColumnName="anonymusname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDonationTypes">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblDonationType">
+        <MappingFragment StoreEntitySet="tblDonationType">
+          <ScalarProperty Name="donationTypeID" ColumnName="donationTypeID" />
+          <ScalarProperty Name="donationType" ColumnName="donationType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmailTemplateSaves">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblEmailTemplateSave">
+        <MappingFragment StoreEntitySet="tblEmailTemplateSave">
+          <ScalarProperty Name="emailTemplateId" ColumnName="emailTemplateId" />
+          <ScalarProperty Name="registrationId" ColumnName="registrationId" />
+          <ScalarProperty Name="templateName" ColumnName="templateName" />
+          <ScalarProperty Name="templateSubject" ColumnName="templateSubject" />
+          <ScalarProperty Name="templateBody" ColumnName="templateBody" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblErrorlogs">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblErrorlog">
+        <MappingFragment StoreEntitySet="tblErrorlog">
+          <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+          <ScalarProperty Name="ErrorType" ColumnName="ErrorType" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="ErrorPage" ColumnName="ErrorPage" />
+          <ScalarProperty Name="OccuredDate" ColumnName="OccuredDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEvents">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblEvent">
+        <MappingFragment StoreEntitySet="tblEvent">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="reasonForRejecting" ColumnName="reasonForRejecting" />
+          <ScalarProperty Name="Approval" ColumnName="Approval" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="BenificiaryType" ColumnName="BenificiaryType" />
+          <ScalarProperty Name="OrganiserName" ColumnName="OrganiserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFeedbacks">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblFeedback">
+        <MappingFragment StoreEntitySet="tblFeedback">
+          <ScalarProperty Name="feedbackID" ColumnName="feedbackID" />
+          <ScalarProperty Name="feedbackReasonID" ColumnName="feedbackReasonID" />
+          <ScalarProperty Name="userFeedback" ColumnName="userFeedback" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFeedbackReasons">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblFeedbackReason">
+        <MappingFragment StoreEntitySet="tblFeedbackReasons">
+          <ScalarProperty Name="feedbackReasonID" ColumnName="feedbackReasonID" />
+          <ScalarProperty Name="feedbackReason" ColumnName="feedbackReason" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRegistrations">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblRegistration">
+        <MappingFragment StoreEntitySet="tblRegistration">
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
+          <ScalarProperty Name="countryID" ColumnName="countryID" />
+          <ScalarProperty Name="stateID" ColumnName="stateID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="emailID" ColumnName="emailID" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+          <ScalarProperty Name="emailConfirmed" ColumnName="emailConfirmed" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="cityid" ColumnName="cityid" />
+          <ScalarProperty Name="middleName" ColumnName="middleName" />
+          <ScalarProperty Name="titleId" ColumnName="titleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStates">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblState">
+        <MappingFragment StoreEntitySet="tblState">
+          <ScalarProperty Name="stateID" ColumnName="stateID" />
+          <ScalarProperty Name="countryId" ColumnName="countryId" />
+          <ScalarProperty Name="stateName" ColumnName="stateName" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStatus">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblStatu">
+        <MappingFragment StoreEntitySet="tblStatus">
+          <ScalarProperty Name="statusID" ColumnName="statusID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSubscribes">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblSubscribe">
+        <MappingFragment StoreEntitySet="tblSubscribe">
+          <ScalarProperty Name="SubscriptionID" ColumnName="SubscriptionID" />
+          <ScalarProperty Name="feedback" ColumnName="feedback" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTestimonials">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblTestimonial">
+        <MappingFragment StoreEntitySet="tblTestimonial">
+          <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="Testimonial" ColumnName="Testimonial" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="Confirmed" ColumnName="Confirmed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTitles">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblTitle">
+        <MappingFragment StoreEntitySet="tblTitle">
+          <ScalarProperty Name="titleId" ColumnName="titleId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserTypes">
+      <EntityTypeMapping TypeName="DonateNeedyNewModel.tblUserType">
+        <MappingFragment StoreEntitySet="tblUserType">
+          <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ChangePassword" FunctionName="DonateNeedyNewModel.Store.usp_ChangePassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_ChangePassword_Result">
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="authenticationID" ColumnName="authenticationID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_CheckCredentials" FunctionName="DonateNeedyNewModel.Store.usp_CheckCredentials" />
+    <FunctionImportMapping FunctionImportName="usp_checkFundRaisedCompletedOrNot" FunctionName="DonateNeedyNewModel.Store.usp_checkFundRaisedCompletedOrNot" />
+    <FunctionImportMapping FunctionImportName="usp_CRUDCloseSwitch" FunctionName="DonateNeedyNewModel.Store.usp_CRUDCloseSwitch" />
+    <FunctionImportMapping FunctionImportName="usp_CRUDtblContactUs" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblContactUs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblContactUs_Result">
+          <ScalarProperty Name="ContactUsID" ColumnName="ContactUsID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="registrationid" ColumnName="registrationid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_CRUDtblEvent" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblEvent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblEvent_Result">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="updateddate" ColumnName="updateddate" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="reasonForRejecting" ColumnName="reasonForRejecting" />
+          <ScalarProperty Name="Approval" ColumnName="Approval" />
+          <ScalarProperty Name="organiserName" ColumnName="organiserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_CRUDtblEventNew" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblEventNew">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblEventNew_Result">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="updateddate" ColumnName="updateddate" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="reasonForRejecting" ColumnName="reasonForRejecting" />
+          <ScalarProperty Name="Approval" ColumnName="Approval" />
+          <ScalarProperty Name="organiserName" ColumnName="organiserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_CRUDtblRegistation" FunctionName="DonateNeedyNewModel.Store.usp_CRUDtblRegistation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDtblRegistation_Result">
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="userTypeID" ColumnName="userTypeID" />
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="countryName" ColumnName="countryName" />
+          <ScalarProperty Name="stateid" ColumnName="stateid" />
+          <ScalarProperty Name="stateName" ColumnName="stateName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="emailID" ColumnName="emailID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="cityid" ColumnName="cityid" />
+          <ScalarProperty Name="cityname" ColumnName="cityname" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+          <ScalarProperty Name="emailConfirmed" ColumnName="emailConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="titleid" ColumnName="titleid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_CRUDUserImgSave" FunctionName="DonateNeedyNewModel.Store.usp_CRUDUserImgSave">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_CRUDUserImgSave_Result">
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_CURDUserProfile" FunctionName="DonateNeedyNewModel.Store.usp_CURDUserProfile" />
+    <FunctionImportMapping FunctionImportName="usp_emergency" FunctionName="DonateNeedyNewModel.Store.usp_emergency">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_emergency_Result">
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getApprovalCount" FunctionName="DonateNeedyNewModel.Store.usp_getApprovalCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getApprovalCount_Result">
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="NotApproved" ColumnName="NotApproved" />
+          <ScalarProperty Name="ApprovalPending" ColumnName="ApprovalPending" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getApprovalData" FunctionName="DonateNeedyNewModel.Store.usp_getApprovalData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getApprovalData_Result">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getCategory" FunctionName="DonateNeedyNewModel.Store.usp_getCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getCategory_Result">
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getCountryNames" FunctionName="DonateNeedyNewModel.Store.usp_getCountryNames">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getCountryNames_Result">
+          <ScalarProperty Name="countryID" ColumnName="countryID" />
+          <ScalarProperty Name="countryName" ColumnName="countryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetEmailConfirm" FunctionName="DonateNeedyNewModel.Store.usp_GetEmailConfirm">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_GetEmailConfirm_Result">
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getEventsData" FunctionName="DonateNeedyNewModel.Store.usp_getEventsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getEventsData_Result">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="OrganiserName" ColumnName="OrganiserName" />
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getFilterEvents" FunctionName="DonateNeedyNewModel.Store.usp_getFilterEvents">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getFilterEvents_Result">
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getFundraisingdata" FunctionName="DonateNeedyNewModel.Store.usp_getFundraisingdata" />
+    <FunctionImportMapping FunctionImportName="usp_getFundraisingEventsData" FunctionName="DonateNeedyNewModel.Store.usp_getFundraisingEventsData" />
+    <FunctionImportMapping FunctionImportName="usp_getHappyPeopleCount" FunctionName="DonateNeedyNewModel.Store.usp_getHappyPeopleCount" />
+    <FunctionImportMapping FunctionImportName="usp_GetRecordsByEventIDOrFundraiserName" FunctionName="DonateNeedyNewModel.Store.usp_GetRecordsByEventIDOrFundraiserName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_GetRecordsByEventIDOrFundraiserName_Result">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="OrganiserName" ColumnName="OrganiserName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="collectedAmount" ColumnName="collectedAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getTestimonialdata" FunctionName="DonateNeedyNewModel.Store.usp_getTestimonialdata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getTestimonialdata_Result">
+          <ScalarProperty Name="testimonial" ColumnName="testimonial" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getTitleNames" FunctionName="DonateNeedyNewModel.Store.usp_getTitleNames">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getTitleNames_Result">
+          <ScalarProperty Name="titleid" ColumnName="titleid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getUserDetails" FunctionName="DonateNeedyNewModel.Store.usp_getUserDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_getUserDetails_Result">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="confirmed" ColumnName="confirmed" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="targetAmount" ColumnName="targetAmount" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getUsersData" FunctionName="DonateNeedyNewModel.Store.usp_getUsersData" />
+    <FunctionImportMapping FunctionImportName="usp_insertFeedback" FunctionName="DonateNeedyNewModel.Store.usp_insertFeedback">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_insertFeedback_Result">
+          <ScalarProperty Name="feedbackID" ColumnName="feedbackID" />
+          <ScalarProperty Name="feedbackReason" ColumnName="feedbackReason" />
+          <ScalarProperty Name="userFeedback" ColumnName="userFeedback" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_InserttblTestimonial" FunctionName="DonateNeedyNewModel.Store.usp_InserttblTestimonial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_InserttblTestimonial_Result">
+          <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+          <ScalarProperty Name="registrationID" ColumnName="registrationID" />
+          <ScalarProperty Name="Testimonial" ColumnName="Testimonial" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_RandomPassword" FunctionName="DonateNeedyNewModel.Store.usp_RandomPassword" />
+    <FunctionImportMapping FunctionImportName="usp_tblEmailTemplateSave" FunctionName="DonateNeedyNewModel.Store.usp_tblEmailTemplateSave">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DonateNeedyNewModel.usp_tblEmailTemplateSave_Result">
+          <ScalarProperty Name="emailTemplateId" ColumnName="emailTemplateId" />
+          <ScalarProperty Name="registrationId" ColumnName="registrationId" />
+          <ScalarProperty Name="templateName" ColumnName="templateName" />
+          <ScalarProperty Name="templateSubject" ColumnName="templateSubject" />
+          <ScalarProperty Name="templateBody" ColumnName="templateBody" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_tblSubscribe" FunctionName="DonateNeedyNewModel.Store.usp_tblSubscribe" />
+    <FunctionImportMapping FunctionImportName="usp_ValidateMemberWithPassword" FunctionName="DonateNeedyNewModel.Store.usp_ValidateMemberWithPassword" />
+  </EntityContainerMapping>
+</Mapping>

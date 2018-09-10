@@ -1,0 +1,94 @@
+﻿@model DonateNeedyDesignNew.Models.MetaData.clsRegister
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="ed_toppadder60 ed_bottompadder60">
+    <div class="container">
+        <div class="row">
+            <div>
+                <div class="ed_teacher_div">
+                    <div class="ed_heading_top">
+                        <h3>Details</h3><br />
+                    </div>
+                    @if (TempData["msg1"] != null)
+                    {
+                        <label style="color:#1e4270;width:100%;text-align:center;">@TempData["msg1"]</label>
+                    }
+                    else if (TempData["msg2"] != null)
+                    {
+                        <label style="color:red;width:100%;text-align:center;">@TempData["msg2"]</label>
+                    }
+
+                    <h5 style="text-align:center;">Please enter the details for the login process to complete</h5><br />
+                    <form class="ed_contact_form ed_toppadder10" method="post" action="/Home/Details" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">First Name <span style="color:#ff0000;">*</span></label>
+                                    <div class="form-group row">
+                                        <div class="col-md-3">
+                                            @Html.DropDownList("Title", (SelectList)ViewBag.Title1, "Title", new { id = "ddlTitle", required = "required", @class = "form-control", autofocus = "autofocus" })
+                                        </div>
+                                        <div class="col-md-9" style="margin-left: -5%;width: 80%;">
+                                            @Html.TextBoxFor(r => r.firstName, new { type = "text", pattern = "^[a-zA-Z]+$", @class = "form-control", required = "required" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Middle Name </label>
+                                    @Html.TextBoxFor(r => r.middleName, new { type = "text", pattern = "^[a-zA-Z]+$", @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Last Name <span style="color:#ff0000;">*</span></label>
+                                    @Html.TextBoxFor(r => r.lastName, new { type = "text", required = "required", pattern = "^[a-zA-Z]+$", @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Email <span style="color:#ff0000;">*</span></label>
+                                    @Html.TextBoxFor(m => m.emailID, new { type = "email", required = "required", @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Phone Number <span style="color:#ff0000;">*</span></label>
+                                    @Html.TextBoxFor(m => m.PhoneNumber, new { type = "text", required = "required", @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Address <span style="color:#ff0000;">*</span></label>
+                                    @Html.TextBoxFor(m => m.Address, new { type = "text", required = "required", @class = "form-control" })
+                                </div>
+                                <input type="hidden" name="usertypeid" value="@ViewBag.usertypeid" />
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Country <span style="color:#ff0000;">*</span></label>
+                                    @Html.DropDownList("Country", (SelectList)ViewBag.Country, "Select Country", new { id = "ddlCountry", required = "required", @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">State <span style="color:#ff0000;">*</span></label>
+                                    <select name="State" id="ddlStateINFO" class="form-control" required></select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">City <span style="color:#ff0000;">*</span></label>
+                                    <select name="city" id="ddlCityINFO" class="form-control" required></select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pincode <span style="color:#ff0000;">*</span></label>
+                                    @Html.TextBoxFor(m => m.Pincode, new { type = "text", required = "required", pattern = "[0-9]{6}", @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Upload Image </label>
+                                    <input type="file" id="photo" placeholder="Upload Photo" onchange="ValidateSize(this)" name="File" accept="image/gif,image/jpeg,.crt,.pem" class="form-control">
+                                </div>
+                                <input type="hidden" name="regid" value="@ViewBag.regid" />
+                            </div>
+                            <br />
+                            <div class="col-md-12">
+                                <button type="submit" class="btn ed_btn ed_orange pull-right" style="outline:none;">Proceed</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/Home/register.js"></script>

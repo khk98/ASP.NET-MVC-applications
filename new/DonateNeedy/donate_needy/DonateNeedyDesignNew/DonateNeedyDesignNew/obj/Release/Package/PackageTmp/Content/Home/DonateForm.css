@@ -1,0 +1,125 @@
+﻿.List-of-Causes {
+    width: 375px;
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #777777;
+    margin-top:20px;
+}
+
+.Donation-Details {
+    width: 176px;
+    height: 28px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    margin-top: 20px;
+}
+
+
+.stepwizard-step p {
+    margin-top: 10px;
+}
+
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard {
+    display: table;
+    width: 50%;
+    position: relative;
+}
+
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    /*background-color: #ccc;*/
+    z-order: 0;
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 24px;
+    line-height: 2;
+    border-radius: 30px;
+}
+
+.form-width{
+    width:27%;
+    margin-right:5%;
+}
+
+.form-inline-user{
+    display:inline-block;
+}
+
+.Rectangle-Next {
+    border-radius: 4.5px;
+    background-color: #d8d8d8;
+    border: solid 1px #979797;
+    border: solid 1px var(--warm-grey);
+}
+
+.Rectangle-Pay-Now {
+    border-radius: 4.5px;
+    background-color: #0158b4;
+    border: solid 1px #979797;
+    border: solid 1px var(--warm-grey);
+}
+
+.pull-center{
+    text-align:center;
+}
+
+.stripe-img {
+    width: 102px;
+    height: 41px;
+    float: right;
+}
+
+.paypal-img {
+    width: 290px;
+    height: 117px;
+}
+
+.paypal-mtop{
+    margin-top:16%;
+}
+
+@media screen and (max-width:767px) {
+    .form-width {
+        width: 100%;
+    }
+    .paypal-mtop {
+        margin-top: 0%;
+    }
+}

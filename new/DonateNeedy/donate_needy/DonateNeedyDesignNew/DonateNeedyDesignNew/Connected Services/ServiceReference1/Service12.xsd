@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49675/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DonateNeedyNewServiceLayer" />
+  <xs:element name="donation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="donationid" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="donationTypeID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="eventID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="statusID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="donationAmount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNUmber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transactionCharges" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="receivedAmount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transActionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailNotification" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="anonymusDonar" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="anonymusName" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="registrationID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="donationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DonateNeedyNewServiceLayer" minOccurs="0" name="donationResult" nillable="true" type="q1:ArrayOfusp_CRUDtblDonations_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="error">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="errorType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="errorPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="registrationId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="errorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DonateNeedyNewServiceLayer" minOccurs="0" name="errorResult" nillable="true" type="q2:ArrayOfusp_CreateErrorLog_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

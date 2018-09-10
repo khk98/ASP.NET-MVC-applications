@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DonateNeedy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bootstrap 3 template for corporate business" />
+    <!-- css -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/plugins/flexslider/flexslider.css" rel="stylesheet" />
+    <link href="~/css/cubeportfolio.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <!-- Theme skin -->
+    <link href="~/skins/default.css" rel="stylesheet" />
+
+    <!-- boxed bg -->
+    <link href="~/bodybg/bg1.css" rel="stylesheet" />
+    <link href="~/Content/Shared/Layout.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="~/Content/Shared/jquery-ui2.css" rel="stylesheet" />
+    <link href="~/Content/Shared/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/Shared/datepicker.css" rel="stylesheet" />
+
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/Home/Index.js"></script>
+    <script src="~/Scripts/jssor.slider-26.9.0.min.js"></script>
+</head>
+<body>
+    <div class="sl-main-wrp-ctnr">
+        <div class="sl-header-ctnr">
+            <div class="scl-icons-sr-ctnr container">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <img src="~/img/256 x 60(1).png" style="height:75px;" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="user-float-right">
+                        <p class="Connect-with-Us">Connect with Us</p>
+                        <button class="sr-icon" id="fb" onclick="window.open('https://www.facebook.com/donateneedy.donateneedy.7', 'name', 'width=600,height=400')">
+                            <i class="fa fa-facebook"></i>
+                        </button>
+                        <button class="sr-icon" id="tw" onclick="window.open('https://twitter.com/DonateNeedy', 'name', 'width=600,height=400')">
+                            <i class="fa fa-twitter"></i>
+                        </button>
+                        <button class="sr-icon" id="linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </button>
+                        <button class="donatebutton Donate-Now" onclick="location.href='@Url.Action("Search", "Home")'">
+                            Donate Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-default navbar-static-top navbar-user">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" style="font-weight:500;font-size: 1.2em;">
+                <ul class="nav navbar-nav">
+                    <li><a href="/Home/Index">Home</a></li>
+                    <li><a href="#">Who we are</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Fundraise</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <ul class="nav navbar-nav user-float-right">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2 col-lg-2">
+                        <div class="widget">
+                            <img src="~/img/256 x 60(1).png" style="height:60px;margin-top:40px;" />
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-lg-2">
+                        <div class="widget">
+                            <h4>Useful links</h4>
+                            <ul class="link-list">
+                                <li><a href="#">Faq's</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Submit a request</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-lg-2 user-width-footer1">
+                        <div class="widget">
+                            <h4>Help us too</h4>
+                            <ul class="link-list">
+                                <li><a href="#">Feedback</a></li>
+                                <li><a href="#">Rate your experience</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2 col-lg-2 user-width-footer1">
+                        <div class="widget">
+                            <h4>Policies</h4>
+                            <ul class="link-list">
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Terms and conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-lg-2 user-width-footer2">
+                        <div class="widget">
+                            <h4>ContactUs</h4>
+                            <ul class="link-list">
+                                <li><a href="#">Call: 888-303-7533</a></li>
+                                <li><a href="#">Fax:  732-303-9190</a></li>
+                                <li><a href="#">mail:  donateneedyww@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-lg-2">
+                        <div class="widget">
+                            <h4>Customer Support</h4>
+                            <div class="Rectangle-6"><a href="#" style="font-size:25px;">1888-303-7533</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <p style="color:white;text-align:center;">© Copyright DonateNeedy.com 2018, All Rights Reserved.</p>
+            </div>
+
+        </footer>
+    </div>
+
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/modernizr.custom.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/plugins/flexslider/flexslider.config.js"></script>
+    <script src="~/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script src="~/js/jquery.appear.js"></script>
+    <script src="~/js/stellar.js"></script>
+    <script src="~/js/classie.js"></script>
+    <script src="~/js/uisearch.js"></script>
+    <script src="~/js/jquery.cubeportfolio.min.js"></script>
+    <script src="~/js/google-code-prettify/prettify.js"></script>
+    <script src="~/js/animate.js"></script>
+    <script src="~/js/custom.js"></script>
+
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/Home/Search.js"></script>
+</body>
+</html>
